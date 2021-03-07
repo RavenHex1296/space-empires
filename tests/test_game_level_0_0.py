@@ -1,9 +1,10 @@
 import sys
-sys.path.append('src')
+sys.path.append('src/game_level_0_0')
 from game import *
 from player import *
 from random_player import *
 from custom_player import *
+
 
 players = [RandomPlayer(), CustomPlayer()]
 game = Game(players)
