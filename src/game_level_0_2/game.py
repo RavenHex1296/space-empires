@@ -2,9 +2,10 @@ import random
 import math
 
 class Game:
-    def __init__(self, players, board_size=[7,7]):
+    def __init__(self, players, random_seed, board_size=[7,7]):
         self.players = players
         self.set_player_numbers()
+        random.seed(random_seed)
 
         board_x, board_y = board_size
         mid_x = (board_x + 1) // 2
