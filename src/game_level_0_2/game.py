@@ -2,10 +2,9 @@ import random
 import math
 
 class Game:
-    def __init__(self, players, random_seed, board_size=[7,7]):
+    def __init__(self, players, board_size=[7,7]):
         self.players = players
         self.set_player_numbers()
-        random.seed(random_seed)
 
         board_x, board_y = board_size
         mid_x = (board_x + 1) // 2
@@ -16,11 +15,19 @@ class Game:
             'board_size': board_size,
             'players': {
                 1: {
-                    'scout_coords': (mid_x, 1),
+                    'scout_coords': {
+                        1: (mid_x, 1),
+                        2: (mid_x, 1),
+                        3: (mid_x, 1),
+                    },
                     'home_colony_coords': (mid_x, 1)
                 },
                 2: {
-                    'scout_coords': (mid_x, board_y),
+                    'scout_coords': {
+                        1: (mid_x, board_y),
+                        2: (mid_x, board_y),
+                        3: (mid_x, board_y),
+                    },
                     'home_colony_coords': (mid_x, board_y)
                 }
             },
@@ -59,46 +66,79 @@ class Game:
         return in_bounds_translations
 
     def complete_combat_phase(self):
-        p1 = self.state['players'][1]
-        p2 = self.state['players'][2]
+        p1_scouts = self.state['players'][1]['scout_coords']
+        p2_scouts = self.state['players'][2]['scout_coords']
+        locs = []
 
-        if p1['scout_coords'] == p2['scout_coords']:
-            winner = round(random.random()) + 1
-            loser = 3 - winner
-            self.state['players'][loser]['scout_coords'] = None
+        for scout1 in p1_scouts:
+            for scout2 in p2_scouts:
+                if p1_scouts[scout1] == p2_scouts[scout2]:
+                    if p1_scouts[scout1] not in locs:
+                        locs.append(p1_scouts[scout1])
+
+        for loc in locs:
+            p1_coord_scouts = [key for key in p1_scouts if p1_scouts[key]==loc]
+            p2_coord_scouts = [key for key in p2_scouts if p2_scouts[key]==loc]
+            while len(p1_coord_scouts)!=0 and len(p2_coord_scouts)!=0:
+                winner = round(random.random()) + 1
+                loser = 3 - winner
+                if loser == 1:
+                    lost_scout = random.choice(p1_coord_scouts)
+                    p1_coord_scouts.remove(lost_scout)
+                    del self.state['players'][loser]['scout_coords'][lost_scout]
+                if loser == 2:
+                    lost_scout = random.choice(p2_coord_scouts)
+                    p2_coord_scouts.remove(lost_scout)
+                    del self.state['players'][loser]['scout_coords'][lost_scout]
 
     def complete_movement_phase(self):
-        for p_num in self.state['players']:
-            if self.state['players'][1]['scout_coords'] == self.state['players'][2]['scout_coords']:
-                break
+        for player_num in self.state['players']:
+            p1 = self.state['players'][1]
+            p2 = self.state['players'][2]
+            frozen_scouts = []
 
-            elif self.state['players'][p_num]['scout_coords'] != None:
-                initial_coordinates = self.state['players'][p_num]['scout_coords']
-                choices = self.get_in_bounds_translations(initial_coordinates)
+            for scout1 in p1['scout_coords']:
+                scout1 = p1['scout_coords'][scout1]
 
-                for player in self.players:
-                    if player.player_number == p_num:
-                        move = player.choose_translation(self.state, choices)
+                for scout2 in p2['scout_coords']:
+                    scout2 = p2['scout_coords'][scout2]
 
-                self.state['players'][p_num]['scout_coords'] = (initial_coordinates[0] + move[0], initial_coordinates[1] + move[1])
+                    if scout1 == scout2 and (1, scout1) not in frozen_scouts:
+                        frozen_scouts.append((1, scout1))
+
+                    if scout1 == scout2 and (2, scout2) not in frozen_scouts:
+                        frozen_scouts.append((2, scout2))
+
+            scouts = self.state['players'][player_num]['scout_coords']
+
+            for scout_num in scouts:
+                scout = scouts[scout_num]
+
+                if (player_num,scout_num) not in frozen_scouts:
+                    choices = self.get_in_bounds_translations(scout)
+                    player = self.players[player_num - 1]
+                    move = player.choose_translation(self.state, choices, scout_num)
+                    self.state['players'][player_num]['scout_coords'][scout_num] = (scout[0] + move[0], scout[1] + move[1])
 
         self.state['turn'] += 1
+        p1_scouts = self.state['players'][1]['scout_coords']
+        p1_base = self.state['players'][1]['home_colony_coords']
+        p2_scouts = self.state['players'][2]['scout_coords']
+        p2_base = self.state['players'][2]['home_colony_coords']
+        p1_loc = [p1_scouts[key] for key in p1_scouts]
+        p2_loc = [p2_scouts[key] for key in p2_scouts]
 
-        p1 = self.state['players'][1]
-        p2 = self.state['players'][2]
-
-        if p1['scout_coords'] != p2['home_colony_coords'] and p2['scout_coords'] != p1['home_colony_coords']:
+        if not any(loc == p2_base for loc in p1_loc) and not any(loc == p1_base for loc in p2_loc):
             self.state['winner'] = None
 
-        elif p1['scout_coords'] == p2['home_colony_coords'] and p2['scout_coords'] != p1['home_colony_coords']:
-            self.state['winner'] =  1
+        if any(loc == p2_base for loc in p1_loc) and not any(loc == p1_base for loc in p2_loc):
+            self.state['winner'] = 1
 
-        elif p1['scout_coords'] != p2['home_colony_coords'] and p2['scout_coords']== p1['home_colony_coords']:
-            self.state['winner'] =  2
+        if not any(loc == p2_base for loc in p1_loc) and any(loc == p1_base for loc in p2_loc):
+            self.state['winner'] = 2
 
-        elif p1['scout_coords'] == p2['home_colony_coords'] and p2['scout_coords'] == p1['home_colony_coords']:
-            self.state['winner'] =  "Tie"
-
+        if any(loc==p2_base for loc in p1_loc) and any(loc==p1_base for loc in p2_loc):
+            self.state['winner'] = "Tie"
 
     def run_to_completion(self):
         while self.state['winner'] == None:

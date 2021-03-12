@@ -1,5 +1,5 @@
 import sys
-sys.path.append('src/game_level_0_2')
+sys.path.append('src/game_level_0_2_random_seeds')
 from game import *
 from random_player import *
 from custom_player import *

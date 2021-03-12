@@ -22,12 +22,12 @@ class CustomPlayer():
         elif self.player_number == 2:
             return 1
 
-    def choose_translation(self, game_state, choices, scout_num):
+    def choose_translation(self, game_state, choices):
         myself = game_state['players'][self.player_number]
         opponent_player_number = self.get_opponent_player_number()
         opponent = game_state['players'][opponent_player_number]
 
-        my_scout_coords = myself['scout_coords'][scout_num]
+        my_scout_coords = myself['scout_coords']
         opponent_home_colony_coords = opponent['home_colony_coords']
 
         closest_choice = choices[0]
