@@ -1,8 +1,13 @@
-import random
 import math
+import random
+import sys
+sys.path.append('src')
+from logger import *
 
 class Game:
     def __init__(self, players, board_size=[7,7]):
+        self.logs = Logger('/home/runner/space-empires/logs/game_level_0_2-log.txt')
+        self.logs.clear_log()
         self.players = players
         self.set_player_numbers()
 
@@ -66,6 +71,11 @@ class Game:
         return in_bounds_translations
 
     def complete_combat_phase(self):
+        if self.state['winner'] != None:
+            return None
+
+        self.logs.write("\nBEGINNING OF TURN " + str(self.state['turn']) + " COMBAT PHASE\n")
+
         p1_scouts = self.state['players'][1]['scout_coords']
         p2_scouts = self.state['players'][2]['scout_coords']
         locs = []
@@ -77,8 +87,10 @@ class Game:
                         locs.append(p1_scouts[scout1])
 
         for loc in locs:
+            self.logs.write("\n\tCombat at " + str(loc) + ":\n")
             p1_coord_scouts = [key for key in p1_scouts if p1_scouts[key]==loc]
             p2_coord_scouts = [key for key in p2_scouts if p2_scouts[key]==loc]
+
             while len(p1_coord_scouts)!=0 and len(p2_coord_scouts)!=0:
                 winner = round(random.random()) + 1
                 loser = 3 - winner
@@ -86,12 +98,48 @@ class Game:
                     lost_scout = random.choice(p1_coord_scouts)
                     p1_coord_scouts.remove(lost_scout)
                     del self.state['players'][loser]['scout_coords'][lost_scout]
-                if loser == 2:
+                    self.logs.write("\n\t\tPlayer 1 Scout " + str
+                    (lost_scout) + " was destroyed")
+
+                elif loser == 2:
                     lost_scout = random.choice(p2_coord_scouts)
                     p2_coord_scouts.remove(lost_scout)
                     del self.state['players'][loser]['scout_coords'][lost_scout]
+                    self.logs.write("\n\t\tPlayer 2 Scout " + str
+                    (lost_scout) + " was destroyed")
+
+        self.logs.write("\n" + "\nEND OF TURN " + str(self.state['turn']) + " COMBAT PHASE\n" + '-' * 50)
+
+        self.state['turn'] += 1
+        p1_scouts = self.state['players'][1]['scout_coords']
+        p1_base = self.state['players'][1]['home_colony_coords']
+        p2_scouts = self.state['players'][2]['scout_coords']
+        p2_base = self.state['players'][2]['home_colony_coords']
+        p1_loc = [p1_scouts[key] for key in p1_scouts]
+        p2_loc = [p2_scouts[key] for key in p2_scouts]
+
+        if not any(loc == p2_base for loc in p1_loc) and not any(loc == p1_base for loc in p2_loc):
+            self.state['winner'] = None
+
+        if any(loc == p2_base for loc in p1_loc) and not any(loc == p1_base for loc in p2_loc):
+            self.logs.write("\nWINNER: PLAYER 1")
+            self.state['winner'] = 1
+
+        if not any(loc == p2_base for loc in p1_loc) and any(loc == p1_base for loc in p2_loc):
+            self.logs.write("\nWINNER: PLAYER 2")
+            self.state['winner'] = 2
+
+        if any(loc==p2_base for loc in p1_loc) and any(loc==p1_base for loc in p2_loc):
+            self.logs.write("\nTIE GAME")
+            self.state['winner'] = "Tie"
+
 
     def complete_movement_phase(self):
+        if self.state['winner'] != None:
+            return None
+
+        self.logs.write("\nBEGINNING OF TURN " + str(self.state['turn']) + " MOVEMENT PHASE\n\n")
+
         for player_num in self.state['players']:
             p1 = self.state['players'][1]
             p2 = self.state['players'][2]
@@ -120,25 +168,9 @@ class Game:
                     move = player.choose_translation(self.state, choices, scout_num)
                     self.state['players'][player_num]['scout_coords'][scout_num] = (scout[0] + move[0], scout[1] + move[1])
 
-        self.state['turn'] += 1
-        p1_scouts = self.state['players'][1]['scout_coords']
-        p1_base = self.state['players'][1]['home_colony_coords']
-        p2_scouts = self.state['players'][2]['scout_coords']
-        p2_base = self.state['players'][2]['home_colony_coords']
-        p1_loc = [p1_scouts[key] for key in p1_scouts]
-        p2_loc = [p2_scouts[key] for key in p2_scouts]
+                self.logs.write("\tPlayer " + str(player_num) + " Scout " + str(scout_num) + ": " + str(scout) + " -> " + str((scout[0] + move[0], scout[1] + move[1])) + "\n")
 
-        if not any(loc == p2_base for loc in p1_loc) and not any(loc == p1_base for loc in p2_loc):
-            self.state['winner'] = None
-
-        if any(loc == p2_base for loc in p1_loc) and not any(loc == p1_base for loc in p2_loc):
-            self.state['winner'] = 1
-
-        if not any(loc == p2_base for loc in p1_loc) and any(loc == p1_base for loc in p2_loc):
-            self.state['winner'] = 2
-
-        if any(loc==p2_base for loc in p1_loc) and any(loc==p1_base for loc in p2_loc):
-            self.state['winner'] = "Tie"
+        self.logs.write("\nEND OF TURN " + str(self.state['turn']) + " MOVEMENT PHASE\n" + "-" * 50)
 
     def run_to_completion(self):
         while self.state['winner'] == None:
