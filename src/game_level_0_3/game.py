@@ -3,6 +3,7 @@ import random
 import sys
 sys.path.append('src')
 from logger import *
+from ship import *
 
 random.seed(1)
 
@@ -17,7 +18,7 @@ class Game:
         board_x, board_y = board_size
         mid_x = (board_x + 1) // 2
         mid_y = (board_y + 1) // 2
-
+'''
         self.state = {
             'turn': 1,
             'board_size': board_size,
@@ -41,6 +42,8 @@ class Game:
             },
             'winner': None
         }
+'''
+        self.board = [[None for _ in range(board_x)] for _ in range(board_y)]
 
     def set_player_numbers(self):
         for i, player in enumerate(self.players):
@@ -80,11 +83,13 @@ class Game:
                     return False
 
         return True
+#checks whether all scouts in list belong to one player
 
     def opponent_scout(self, p_num, combat_loc):
         for scout in combat_loc:
             if scout[0] != p_num:
                 return scout
+#gets the opponents scouts at said combat_location
 
     def complete_combat_phase(self):
         if self.state['winner'] != None:
@@ -108,7 +113,7 @@ class Game:
 
 
             while not self.same_player_scouts([scout[0] for scout in self.combat_coords[loc]]):
-
+#loop through combat_coords dict, set attacker & defender, proceed
                 for scout in self.combat_coords[loc]:
                     attacker = scout
                     defender = self.opponent_scout(scout[0], self.combat_coords[loc])
@@ -142,6 +147,7 @@ class Game:
 
         self.logs.write("\nEND OF TURN " + str(self.state['turn']) + " COMBAT PHASE\n")
 
+#could probably put this winner code into a helper function
         self.state['turn'] += 1
         p1_scouts = self.state['players'][1]['scout_coords']
         p1_base = self.state['players'][1]['home_colony_coords']
@@ -149,7 +155,7 @@ class Game:
         p2_base = self.state['players'][2]['home_colony_coords']
         p1_loc = [p1_scouts[key] for key in p1_scouts]
         p2_loc = [p2_scouts[key] for key in p2_scouts]
-
+#It'd be nice to shorten this winner code somehow since it all follows a similar pattern
         if not any(loc == p2_base for loc in p1_loc) and not any(loc == p1_base for loc in p2_loc):
             self.state['winner'] = None
 
@@ -163,13 +169,13 @@ class Game:
 
         if any(loc == p2_base for loc in p1_loc) and any(loc == p1_base for loc in p2_loc):
             self.logs.write("\nTIE GAME")
-            self.state['winner'] = "Tie"
+              self.state['winner'] = "Tie"
 
 
     def complete_movement_phase(self):
         if self.state['winner'] != None:
             return None
-
+#basically just chooses a translation and updates the locations accordingly
         self.logs.write("\nBEGINNING OF TURN " + str(self.state['turn']) + " MOVEMENT PHASE\n\n")
 
         for p_num in self.state['players']:
@@ -187,6 +193,8 @@ class Game:
                 choice = player.choose_translation(self.state, choices, scout_num)
                 updated_locs = (scout[0] + choice[0], scout[1] + choice[1])
 
+#updates states by manually setting to updated locations
+
                 self.state['players'][p_num]['scout_coords'][scout_num] = updated_locs
                 self.logs.write('\tPlayer ' + str(p_num) + ' Scout ' + str(scout_num) + ': ' + str(scout) + ' -> ' + str(updated_locs) + '\n')
 
@@ -194,7 +202,8 @@ class Game:
                     if op_scouts[scout] == updated_locs and updated_locs not in self.combat_coords:
                         self.combat_coords[updated_locs] = [(3-p_num, scout)]
 
-                    elif op_scouts[scout]== updated_locs and updated_locs in self.combat_coords:
+                    elif op_scouts[scout] == updated_locs and updated_locs in self.combat_coords:
+
                         if (3 - p_num, scout) not in self.combat_coords[updated_locs]:
                             self.combat_coords[updated_locs].append((3 - p_num, scout))
 
