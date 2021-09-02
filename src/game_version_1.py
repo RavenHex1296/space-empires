@@ -14,7 +14,6 @@ class Game:
         self.players = players
         self.set_player_numbers()
         self.board_size = board_size
-        self.combat_coordinates = []
  
         global board_x, board_y, mid_x, mid_y
         board_x, board_y = board_size
@@ -75,6 +74,13 @@ class Game:
 
     def remove_from_board(self, objects, coordinate):
         self.board[coordinate[1]][coordinate[0]].remove(objects)
+    
+    def move_ship(self, ship, translation):
+        x, y = ship.coordinates
+        updated_coordinates = (x + translation[0], y + translation[1])
+        self.board[x][y].remove(ship)
+        self.board[updated_coordinates[0]][updated_coordinates[1]].append(ship)
+        ship.coordinates = updated_coordinates
 
     def set_game(self):
         starting_coordinates = [(0, mid_x - 1), (board_y - 1, mid_x - 1), (mid_y - 1, 0), (mid_y - 1, board_x - 1)]
@@ -94,18 +100,37 @@ class Game:
                 player.add_ship(scout)
                 player.add_ship(battle_cruiser)
 
+    def get_combat_coordinates(self):
+        combat_coordinates = []
+
+        for y in range(board_y):
+            for x in range(board_x):
+                if len(self.board[y][x]) > 1:
+                    for thing in self.board[y][x]:
+                        if thing.player_number != self.board[y][x][0].player_number:
+                              combat_locations.append((x, y))
+                              break
+
+        return combat_locations
+    
+    def get_ships_on_coordinate(self, player_number, coordinate):
+        ships_on_coordinate = []
+
+        for ship in self.board[coordinate[1]][coordinate[0]]:
+            if ship.player_number == player_number:
+                ships_on_coordinate.append[ship]
+
+        return ships_on_coordinate 
+
     def complete_movement_phase(self):
         for player in self.players:
               for ship in player.ships:
                   if self.is_enemy_in_translation:
                       continue
 
-                  coordinates = ship.coordinates
-                  options = self.get_in_bounds_translations(coordinates)
-
-                  translation = player.select_translation(coordinates, options, [other_player.home_colony.coordinates for other_player in self.players if other_player.player_number != player.player_number])
-                  updated_coordinates = [coordinates[n] + translation[n] for n in range(len(coordinates))]
-
+                  options = self.get_in_bounds_translations(ship.coordinates)
+                  translation = player.select_translation(ship.coordinates, options, [other_player.home_colony.coordinates for other_player in self.players if other_player.player_number != player.player_number])
+                  self.move_ship(ship, translation)
                   self.add_to_board(ship, updated_coordinates)
                   ship.update_coordinates(updated_coordinates)
                   self.remove_from_board(ship, coordinates)
