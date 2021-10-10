@@ -1,6 +1,9 @@
 import sys
 sys.path.append('src')
-from game_version_1 import *
+
+from game import *
+sys.path.append('src/strategies')
+from test_strategy import *
 from illegal_strategy import *
 from custom_strategy import *
 from logger import *
@@ -10,7 +13,7 @@ sys.path.append('src/old stuff')
 from custom_player import *
 from pause_strategy import *
 
-
+'''
 players = [Player(IllegalStrategy()), Player(IllegalStrategy())]
 game = Game(players)
 
@@ -57,3 +60,6 @@ game.run_to_completion()
 
 assert game.winner == 1
 print("PASSED")
+
+'''
+

@@ -21,7 +21,7 @@ class Game:
         board_x, board_y = board_size
         mid_x = (board_x + 1) // 2
         mid_y = (board_y + 1) // 2
- 
+
         self.board = [[[] for _ in range(board_x)] for _ in range(board_y)]
         self.turn = 1
         self.winner = None
@@ -50,7 +50,7 @@ class Game:
         dx, dy = translation
         translation = (x + dx, y + dy)
         return self.check_if_coordinates_are_in_bounds(translation)
- 
+
     def get_in_bounds_translations(self, coordinates):
         translations = [(0,0), (0,1), (0,-1), (1,0), (-1,0)]
         in_bounds_translations = []
@@ -86,6 +86,16 @@ class Game:
         ship.update_coordinates(new_coords)
         self.add_to_board(ship, new_coords)
 
+    def get_used_coordinates(self):
+        used_coordinates = []
+
+        for y in range(board_y):
+            for x in range(board_x):
+                if len(self.board[y][x]) != 0:
+                    used_coordinates.append((y, x))
+
+        return used_coordinates
+
     def set_game(self):
         starting_coordinates = [(0, mid_x - 1), (board_y - 1, mid_x - 1), (mid_y - 1, 0), (mid_y - 1, board_x - 1)]
 
@@ -102,12 +112,17 @@ class Game:
 
             for n in range(3):
                 scout = Scout(player_number, coordinates, n + 1)
-                #battle_cruiser = BattleCruiser(player_number, coordinates, n + 1)
+                battle_cruiser = BattleCruiser(player_number, coordinates, n + 1)
                 self.add_to_board(scout, coordinates)
                 #self.add_to_board(battle_cruiser, coordinates)
 
                 player.add_ship(scout)
-                #player.add_ship(battle_cruiser)
+                player.add_ship(battle_cruiser)
+
+
+        #for coordinate in self.get_used_coordinates():
+            #player.strategy.simple_board[coordinate] = [thing.__dict__ for thing in self.board[coordinate[1]][coordinate[0]]]
+
 
         self.logs.write('\n')
 
@@ -121,7 +136,7 @@ class Game:
             return None
 
         roll = random.randint(1, 10)
-        new_atk = attacker.atk - defender.defense
+        new_atk = attacker.atk - defender.df
         self.logs.write('\Player ' + str(attacker.player_number) + ' ' + str(attacker.name)+' ' + str(attacker.num) + ' attacking player '+str(defender.player_number)+' '+str(defender.name) + ' ' + str(defender.num) + '...')
 
         if roll <= new_atk:
