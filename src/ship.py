@@ -23,7 +23,7 @@ class BattleCruiser(Ship):
     def __init__(self, player_number, coordinates, num=None):
         self.hp = 2
         self.atk = 5
-        self.defense = 1
+        self.df = 1
         self.name = 'BattleCruiser'
         self.player_number = player_number
         self.ship_class = "B"

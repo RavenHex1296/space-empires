@@ -6,6 +6,7 @@ sys.path.append('src/strategies')
 from test_strategy import *
 from illegal_strategy import *
 from custom_strategy import *
+from maia import *
 from logger import *
 from player import *
 from ship import *
@@ -63,3 +64,6 @@ print("PASSED")
 
 '''
 
+players = [Player(CustomStrategy()), Player(StraightToEnemyColony())]
+game = Game(players)
+game.run_to_completion()

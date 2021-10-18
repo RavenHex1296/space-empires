@@ -22,11 +22,12 @@ class Game:
         mid_x = (board_x + 1) // 2
         mid_y = (board_y + 1) // 2
 
-        self.board = [[[] for _ in range(board_x)] for _ in range(board_y)]
+        self.board = {}
         self.turn = 1
         self.winner = None
  
-        self.set_game()
+        self.initialize_game()
+        self.get_simple_board()
 
     def set_player_numbers(self):
         for i, player in enumerate(self.players):
@@ -62,7 +63,7 @@ class Game:
         return in_bounds_translations
 
     def is_enemy_in_translation(self, ship):
-        for item in self.board[ship.coordinates[1]][ship.coordinates[0]]:
+        for item in self.board[ship.coordinates]:
             if item.player_number != ship.player_number:
                 if ship.coordinates not in self.combat_coordinates and isinstance(ship, Ship) and isinstance(item, Ship):
                     self.combat_coordinates.append(ship.coordinates)
@@ -72,31 +73,39 @@ class Game:
         return False
 
     def add_to_board(self, objects, coordinates):
-        self.board[coordinates[1]][coordinates[0]].append(objects)
+        if type(objects) is not list:
+            objects = [objects]
+
+        for obj in objects:
+            if obj.coordinates not in list(self.board.keys()):
+                self.board[coordinates] = [obj]
+                continue
+
+            self.board[obj.coordinates].append(obj)
 
     def remove_from_board(self, objects, coordinate):
-        self.board[coordinate[1]][coordinate[0]].remove(objects)
-    
-    def move_ship(self, ship, translation):
-        new_coords = [ship.coordinates[n] + translation[n] for n in range(len(ship.coordinates))]
+        if type(objects) is not list:
+            objects = [objects]
 
-        self.logs.write('\tMOVING PLAYER '+str(ship.player_number)+' '+str(ship.name)+' '+str(ship.num)+': '+str(ship.coordinates)+' -> '+str(new_coords)+'\n')
+        for obj in objects:
+            if coordinate not in list(self.board.keys()):
+                return
+
+            self.board[coordinate].remove(obj)
+
+            if len(self.board[coordinate]) == 0:
+                del self.board[coordinate]
+
+    def move_ship(self, ship, translation):
+        new_coordinates = (ship.coordinates[0] + translation[0], ship.coordinates[1] + translation[1])
+
+        self.logs.write('\tMoving player ' + str(ship.player_number) + ' ' + str(ship.name) + ' ' + str(ship.num) + ': ' + str(ship.coordinates) + ' -> '+ str(new_coordinates) + '\n')
 
         self.remove_from_board(ship, ship.coordinates)
-        ship.update_coordinates(new_coords)
-        self.add_to_board(ship, new_coords)
+        ship.update_coordinates(new_coordinates)
+        self.add_to_board(ship, new_coordinates)
 
-    def get_used_coordinates(self):
-        used_coordinates = []
-
-        for y in range(board_y):
-            for x in range(board_x):
-                if len(self.board[y][x]) != 0:
-                    used_coordinates.append((y, x))
-
-        return used_coordinates
-
-    def set_game(self):
+    def initialize_game(self):
         starting_coordinates = [(0, mid_x - 1), (board_y - 1, mid_x - 1), (mid_y - 1, 0), (mid_y - 1, board_x - 1)]
 
         self.logs.write(str(len(self.players)) + ' Players are playing\n')
@@ -114,17 +123,18 @@ class Game:
                 scout = Scout(player_number, coordinates, n + 1)
                 battle_cruiser = BattleCruiser(player_number, coordinates, n + 1)
                 self.add_to_board(scout, coordinates)
-                #self.add_to_board(battle_cruiser, coordinates)
+                self.add_to_board(battle_cruiser, coordinates)
 
                 player.add_ship(scout)
                 player.add_ship(battle_cruiser)
 
-
-        #for coordinate in self.get_used_coordinates():
-            #player.strategy.simple_board[coordinate] = [thing.__dict__ for thing in self.board[coordinate[1]][coordinate[0]]]
-
-
         self.logs.write('\n')
+
+    def get_simple_board(self):
+        simple_board = {key: [obj.__dict__ for obj in self.board[key]] for key in self.board if len(self.board[key]) != 0}
+
+        for player in self.players:
+            player.strategy.simple_board = simple_board
 
     def confirm_hit(self, attacker, defender):
         if attacker.hp <= 0 or defender.hp <= 0:
@@ -146,6 +156,11 @@ class Game:
         self.logs.write('Miss\n')
         return False
 
+    def remove_ship(self, ship):
+        player = self.players[ship.player_number - 1]
+        player.ships.remove(ship)
+        self.remove_from_board(ship, ship.coordinates)
+
     def complete_movement_phase(self):
         if self.winner != None:
             return
@@ -158,22 +173,21 @@ class Game:
                   continue
 
               self.logs.write('PLAYER ' + str(player.player_number) + ' MOVING:\n')
-              opponent_home_colony = [p.home_colony.coordinates for p in self.players if p.player_number != player.player_number]
   
               for ship in player.ships:
-                  if self.is_enemy_in_translation(ship):
-                      continue
+                if self.is_enemy_in_translation(ship):
+                    continue
 
-                  options = self.get_in_bounds_translations(ship.coordinates)
-                  translation = player.select_translation(ship.coordinates, options, opponent_home_colony)
+                options = self.get_in_bounds_translations(ship.__dict__['coordinates'])
+                move = player.select_translation(ship.__dict__, options)
 
-                  if translation not in options:
-                      self.logs.write('Invalid option\n')
-                      continue
+                if move not in options:
+                    self.logs.write('Illegal move\n')
+                    continue
 
-
-                  self.move_ship(ship, translation)
-                  self.is_enemy_in_translation(ship)
+                self.move_ship(ship, move)
+                self.is_enemy_in_translation(ship)
+                self.get_simple_board()
 
               self.logs.write('\n')
 
@@ -190,8 +204,7 @@ class Game:
         for coordinate in self.combat_coordinates:
             self.logs.write('Combat at ' + str(coordinate) + ':\n\n')
 
-            sorting = sorted([obj for obj in self.board[coordinate[1]][coordinate[0]] if isinstance(obj, Ship)], key=lambda x: x.ship_class)
-
+            sorting = sorted([obj for obj in self.board[coordinate] if isinstance(obj, Ship)], key=lambda x: x.ship_class)
             self.logs.write('\Combat Order:\n')
 
             for ship in sorting:
@@ -208,7 +221,12 @@ class Game:
                 if len(opponents) == 0:
                     continue
 
-                target = player.select_target(opponents)
+                targetid = player.select_target(ship.__dict__, [ship.__dict__ for ship in sorting])
+                target = None
+
+                for option in opponents:
+                    if option.num == targetid:
+                        target = option
 
                 if target not in opponents:
                     self.logs.write('Invalid target\n')
@@ -219,9 +237,9 @@ class Game:
 
                     if target.hp <= 0:
                         self.logs.write('\Player ' + str(target.player_number) + ' ' + str(target.name) + ' ' + str(target.num)+' was destroyed in combat\n')
-                        player = self.players[ship.player_number - 1]
-                        player.ships.remove(ship)
-                        self.remove_from_board(ship, ship.coordinates)
+                        self.remove_ship(target)
+
+                self.get_simple_board()
 
             for ship in sorting:
                 if ship.hp <= 0:
@@ -240,9 +258,7 @@ class Game:
 
     def remove_player(self, player):
         for ship in player.ships:
-            player = self.players[ship.player_number - 1]
-            player.ships.remove(ship)
-            self.remove_from_board(ship, ship.coordinates)
+            self.remove_ship(ship)
 
         for colony in player.colonies:
             self.remove_from_board(colony, colony.coordinates)

@@ -7,5 +7,11 @@ Player 2 starting at (6, 3)
 Start turn 1 Movement phase
 
 PLAYER 1 MOVING:
-	MOVING PLAYER 1 Scout 1: (0, 3) -> [0, 4]
-	MOVING PLAYER 1 BattleCruiser 1: (0, 3) -> [0, 4]
+	Moving player 1 Scout 1: (0, 3) -> (1, 3)
+	Moving player 1 BattleCruiser 1: (0, 3) -> (1, 3)
+	Moving player 1 Scout 2: (0, 3) -> (1, 3)
+	Moving player 1 BattleCruiser 2: (0, 3) -> (1, 3)
+	Moving player 1 Scout 3: (0, 3) -> (1, 3)
+	Moving player 1 BattleCruiser 3: (0, 3) -> (1, 3)
+
+PLAYER 2 MOVING:
