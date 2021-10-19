@@ -64,6 +64,7 @@ print("PASSED")
 
 '''
 
-players = [Player(CustomStrategy()), Player(StraightToEnemyColony())]
+players = [Player(CustomStrategy()), Player(CustomStrategy())]
 game = Game(players)
 game.run_to_completion()
+print(game.winner)

@@ -15,3 +15,416 @@ PLAYER 1 MOVING:
 	Moving player 1 BattleCruiser 3: (0, 3) -> (1, 3)
 
 PLAYER 2 MOVING:
+	Moving player 2 Scout 1: (6, 3) -> (5, 3)
+	Moving player 2 BattleCruiser 1: (6, 3) -> (5, 3)
+	Moving player 2 Scout 2: (6, 3) -> (5, 3)
+	Moving player 2 BattleCruiser 2: (6, 3) -> (5, 3)
+	Moving player 2 Scout 3: (6, 3) -> (5, 3)
+	Moving player 2 BattleCruiser 3: (6, 3) -> (5, 3)
+
+End turn 1 movement phase
+
+Beginning of turn 1 combat phase
+
+End turn 1 combat phase
+
+Start turn 2 Movement phase
+
+PLAYER 1 MOVING:
+	Moving player 1 Scout 1: (1, 3) -> (2, 3)
+	Moving player 1 BattleCruiser 1: (1, 3) -> (2, 3)
+	Moving player 1 Scout 2: (1, 3) -> (2, 3)
+	Moving player 1 BattleCruiser 2: (1, 3) -> (2, 3)
+	Moving player 1 Scout 3: (1, 3) -> (2, 3)
+	Moving player 1 BattleCruiser 3: (1, 3) -> (2, 3)
+
+PLAYER 2 MOVING:
+	Moving player 2 Scout 1: (5, 3) -> (4, 3)
+	Moving player 2 BattleCruiser 1: (5, 3) -> (4, 3)
+	Moving player 2 Scout 2: (5, 3) -> (4, 3)
+	Moving player 2 BattleCruiser 2: (5, 3) -> (4, 3)
+	Moving player 2 Scout 3: (5, 3) -> (4, 3)
+	Moving player 2 BattleCruiser 3: (5, 3) -> (4, 3)
+
+End turn 2 movement phase
+
+Beginning of turn 2 combat phase
+
+End turn 2 combat phase
+
+Start turn 3 Movement phase
+
+PLAYER 1 MOVING:
+	Moving player 1 Scout 1: (2, 3) -> (3, 3)
+	Moving player 1 BattleCruiser 1: (2, 3) -> (3, 3)
+	Moving player 1 Scout 2: (2, 3) -> (3, 3)
+	Moving player 1 BattleCruiser 2: (2, 3) -> (3, 3)
+	Moving player 1 Scout 3: (2, 3) -> (3, 3)
+	Moving player 1 BattleCruiser 3: (2, 3) -> (3, 3)
+
+PLAYER 2 MOVING:
+	Moving player 2 Scout 1: (4, 3) -> (3, 3)
+	Moving player 2 BattleCruiser 1: (4, 3) -> (3, 3)
+	Moving player 2 Scout 2: (4, 3) -> (3, 3)
+	Moving player 2 BattleCruiser 2: (4, 3) -> (3, 3)
+	Moving player 2 Scout 3: (4, 3) -> (3, 3)
+	Moving player 2 BattleCruiser 3: (4, 3) -> (3, 3)
+
+End turn 3 movement phase
+
+Beginning of turn 3 combat phase
+
+Combat at (3, 3):
+
+\Combat Order:
+	\Player 1 BattleCruiser 1
+
+	Starting combat...
+
+	\Player 1 BattleCruiser 2
+
+	Starting combat...
+
+	\Player 1 BattleCruiser 3
+
+	Starting combat...
+
+	\Player 2 BattleCruiser 1
+
+	Starting combat...
+
+	\Player 2 BattleCruiser 2
+
+	Starting combat...
+
+	\Player 2 BattleCruiser 3
+
+	Starting combat...
+
+	\Player 1 Scout 1
+
+	Starting combat...
+
+	\Player 1 Scout 2
+
+	Starting combat...
+
+	\Player 1 Scout 3
+
+	Starting combat...
+
+	\Player 2 Scout 1
+
+	Starting combat...
+
+	\Player 2 Scout 2
+
+	Starting combat...
+
+	\Player 2 Scout 3
+
+	Starting combat...
+
+\Player 1 BattleCruiser 1 attacking player 2 Scout 1...Miss
+\Player 1 BattleCruiser 2 attacking player 2 Scout 1...Miss
+\Player 1 BattleCruiser 3 attacking player 2 Scout 1...Miss
+\Player 2 BattleCruiser 1 attacking player 1 Scout 1...Hit!
+\Player 1 Scout 1 was destroyed in combat
+\Player 2 BattleCruiser 2 attacking player 1 Scout 2...Miss
+\Player 2 BattleCruiser 3 attacking player 1 Scout 2...Hit!
+\Player 1 Scout 2 was destroyed in combat
+\Player 1 Scout 3 attacking player 2 Scout 1...Miss
+\Player 2 Scout 1 attacking player 1 Scout 3...Miss
+\Player 2 Scout 2 attacking player 1 Scout 3...Miss
+\Player 2 Scout 3 attacking player 1 Scout 3...Miss
+
+End turn 3 combat phase
+
+Start turn 4 Movement phase
+
+PLAYER 1 MOVING:
+
+PLAYER 2 MOVING:
+
+End turn 4 movement phase
+
+Beginning of turn 4 combat phase
+
+Combat at (3, 3):
+
+\Combat Order:
+	\Player 1 BattleCruiser 1
+
+	Starting combat...
+
+	\Player 1 BattleCruiser 2
+
+	Starting combat...
+
+	\Player 1 BattleCruiser 3
+
+	Starting combat...
+
+	\Player 2 BattleCruiser 1
+
+	Starting combat...
+
+	\Player 2 BattleCruiser 2
+
+	Starting combat...
+
+	\Player 2 BattleCruiser 3
+
+	Starting combat...
+
+	\Player 1 Scout 3
+
+	Starting combat...
+
+	\Player 2 Scout 1
+
+	Starting combat...
+
+	\Player 2 Scout 2
+
+	Starting combat...
+
+	\Player 2 Scout 3
+
+	Starting combat...
+
+\Player 1 BattleCruiser 1 attacking player 2 Scout 2...Hit!
+\Player 2 Scout 2 was destroyed in combat
+\Player 1 BattleCruiser 2 attacking player 2 Scout 3...Hit!
+\Player 2 Scout 3 was destroyed in combat
+\Player 1 BattleCruiser 3 attacking player 2 BattleCruiser 2...Hit!
+\Player 2 BattleCruiser 1 attacking player 1 Scout 3...Miss
+\Player 2 BattleCruiser 2 attacking player 1 Scout 3...Miss
+\Player 2 BattleCruiser 3 attacking player 1 BattleCruiser 1...Hit!
+\Player 1 Scout 3 attacking player 2 Scout 1...Hit!
+\Player 2 Scout 1 was destroyed in combat
+
+End turn 4 combat phase
+
+Start turn 5 Movement phase
+
+PLAYER 1 MOVING:
+
+PLAYER 2 MOVING:
+
+End turn 5 movement phase
+
+Beginning of turn 5 combat phase
+
+Combat at (3, 3):
+
+\Combat Order:
+	\Player 1 BattleCruiser 1
+
+	Starting combat...
+
+	\Player 1 BattleCruiser 2
+
+	Starting combat...
+
+	\Player 1 BattleCruiser 3
+
+	Starting combat...
+
+	\Player 2 BattleCruiser 1
+
+	Starting combat...
+
+	\Player 2 BattleCruiser 2
+
+	Starting combat...
+
+	\Player 2 BattleCruiser 3
+
+	Starting combat...
+
+	\Player 1 Scout 3
+
+	Starting combat...
+
+\Player 1 BattleCruiser 1 attacking player 2 BattleCruiser 2...Hit!
+\Player 2 BattleCruiser 2 was destroyed in combat
+Invalid target
+Invalid target
+\Player 2 BattleCruiser 1 attacking player 1 Scout 3...Miss
+\Player 2 BattleCruiser 3 attacking player 1 BattleCruiser 1...Miss
+\Player 1 Scout 3 attacking player 2 BattleCruiser 1...Miss
+
+End turn 5 combat phase
+
+Start turn 6 Movement phase
+
+PLAYER 1 MOVING:
+
+PLAYER 2 MOVING:
+
+End turn 6 movement phase
+
+Beginning of turn 6 combat phase
+
+Combat at (3, 3):
+
+\Combat Order:
+	\Player 1 BattleCruiser 1
+
+	Starting combat...
+
+	\Player 1 BattleCruiser 2
+
+	Starting combat...
+
+	\Player 1 BattleCruiser 3
+
+	Starting combat...
+
+	\Player 2 BattleCruiser 1
+
+	Starting combat...
+
+	\Player 2 BattleCruiser 3
+
+	Starting combat...
+
+	\Player 1 Scout 3
+
+	Starting combat...
+
+\Player 1 BattleCruiser 1 attacking player 2 BattleCruiser 1...Miss
+\Player 1 BattleCruiser 2 attacking player 2 BattleCruiser 1...Miss
+\Player 1 BattleCruiser 3 attacking player 2 BattleCruiser 1...Hit!
+\Player 2 BattleCruiser 1 attacking player 1 BattleCruiser 2...Miss
+\Player 2 BattleCruiser 3 attacking player 1 BattleCruiser 1...Hit!
+\Player 1 BattleCruiser 1 was destroyed in combat
+\Player 1 Scout 3 attacking player 2 BattleCruiser 3...Hit!
+
+End turn 6 combat phase
+
+Start turn 7 Movement phase
+
+PLAYER 1 MOVING:
+
+PLAYER 2 MOVING:
+
+End turn 7 movement phase
+
+Beginning of turn 7 combat phase
+
+Combat at (3, 3):
+
+\Combat Order:
+	\Player 1 BattleCruiser 2
+
+	Starting combat...
+
+	\Player 1 BattleCruiser 3
+
+	Starting combat...
+
+	\Player 2 BattleCruiser 1
+
+	Starting combat...
+
+	\Player 2 BattleCruiser 3
+
+	Starting combat...
+
+	\Player 1 Scout 3
+
+	Starting combat...
+
+\Player 1 BattleCruiser 2 attacking player 2 BattleCruiser 1...Hit!
+\Player 2 BattleCruiser 1 was destroyed in combat
+Invalid target
+\Player 2 BattleCruiser 3 attacking player 1 BattleCruiser 2...Hit!
+Invalid target
+
+End turn 7 combat phase
+
+Start turn 8 Movement phase
+
+PLAYER 1 MOVING:
+
+PLAYER 2 MOVING:
+
+End turn 8 movement phase
+
+Beginning of turn 8 combat phase
+
+Combat at (3, 3):
+
+\Combat Order:
+	\Player 1 BattleCruiser 2
+
+	Starting combat...
+
+	\Player 1 BattleCruiser 3
+
+	Starting combat...
+
+	\Player 2 BattleCruiser 3
+
+	Starting combat...
+
+	\Player 1 Scout 3
+
+	Starting combat...
+
+\Player 1 BattleCruiser 2 attacking player 2 BattleCruiser 3...Miss
+\Player 1 BattleCruiser 3 attacking player 2 BattleCruiser 3...Hit!
+\Player 2 BattleCruiser 3 was destroyed in combat
+
+End turn 8 combat phase
+
+Start turn 9 Movement phase
+
+PLAYER 1 MOVING:
+	Moving player 1 BattleCruiser 2: (3, 3) -> (4, 3)
+	Moving player 1 Scout 3: (3, 3) -> (4, 3)
+	Moving player 1 BattleCruiser 3: (3, 3) -> (4, 3)
+
+PLAYER 2 HAS NO SHIPS
+
+End turn 9 movement phase
+
+Beginning of turn 9 combat phase
+
+End turn 9 combat phase
+
+Start turn 10 Movement phase
+
+PLAYER 1 MOVING:
+	Moving player 1 BattleCruiser 2: (4, 3) -> (5, 3)
+	Moving player 1 Scout 3: (4, 3) -> (5, 3)
+	Moving player 1 BattleCruiser 3: (4, 3) -> (5, 3)
+
+PLAYER 2 HAS NO SHIPS
+
+End turn 10 movement phase
+
+Beginning of turn 10 combat phase
+
+End turn 10 combat phase
+
+Start turn 11 Movement phase
+
+PLAYER 1 MOVING:
+	Moving player 1 BattleCruiser 2: (5, 3) -> (6, 3)
+	Moving player 1 Scout 3: (5, 3) -> (6, 3)
+	Moving player 1 BattleCruiser 3: (5, 3) -> (6, 3)
+
+PLAYER 2 HAS NO SHIPS
+
+End turn 11 movement phase
+
+Beginning of turn 11 combat phase
+
+End turn 11 combat phase
+
+Player 2 was removed from the game
+
+Player 1 won

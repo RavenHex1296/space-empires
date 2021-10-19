@@ -1,5 +1,5 @@
 class Colony():
     def __init__(self, player_number, coordinates):
-        self.coordinates = coordinates
-        self.player_number = player_number
+        self.coords = coordinates
+        self.player_num = player_number
         self.obj_type = 'Colony'

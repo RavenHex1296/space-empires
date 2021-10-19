@@ -17,7 +17,7 @@ def create_simple_board(board):
 
     for coordinate in used_coordinates:
         simple_board[coordinate] = 
-'''
+
 
 class Student():
     def __init__(self, age, grade, name):
@@ -43,3 +43,9 @@ for coordinate in get_used_coordinates(board):
         simple_board[coordinate].append(obj.__dict__)
 
 print(simple_board, '\n')
+'''
+
+if True:
+    x = 1
+
+print(x)

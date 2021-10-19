@@ -63,10 +63,10 @@ class Game:
         return in_bounds_translations
 
     def is_enemy_in_translation(self, ship):
-        for item in self.board[ship.coordinates]:
-            if item.player_number != ship.player_number:
-                if ship.coordinates not in self.combat_coordinates and isinstance(ship, Ship) and isinstance(item, Ship):
-                    self.combat_coordinates.append(ship.coordinates)
+        for item in self.board[ship.coords]:
+            if item.player_num != ship.player_num:
+                if ship.coords not in self.combat_coordinates and isinstance(ship, Ship) and isinstance(item, Ship):
+                    self.combat_coordinates.append(ship.coords)
 
                 return True
 
@@ -77,11 +77,11 @@ class Game:
             objects = [objects]
 
         for obj in objects:
-            if obj.coordinates not in list(self.board.keys()):
+            if obj.coords not in list(self.board.keys()):
                 self.board[coordinates] = [obj]
                 continue
 
-            self.board[obj.coordinates].append(obj)
+            self.board[obj.coords].append(obj)
 
     def remove_from_board(self, objects, coordinate):
         if type(objects) is not list:
@@ -97,11 +97,11 @@ class Game:
                 del self.board[coordinate]
 
     def move_ship(self, ship, translation):
-        new_coordinates = (ship.coordinates[0] + translation[0], ship.coordinates[1] + translation[1])
+        new_coordinates = (ship.coords[0] + translation[0], ship.coords[1] + translation[1])
 
-        self.logs.write('\tMoving player ' + str(ship.player_number) + ' ' + str(ship.name) + ' ' + str(ship.num) + ': ' + str(ship.coordinates) + ' -> '+ str(new_coordinates) + '\n')
+        self.logs.write('\tMoving player ' + str(ship.player_num) + ' ' + str(ship.name) + ' ' + str(ship.ship_num) + ': ' + str(ship.coords) + ' -> '+ str(new_coordinates) + '\n')
 
-        self.remove_from_board(ship, ship.coordinates)
+        self.remove_from_board(ship, ship.coords)
         ship.update_coordinates(new_coordinates)
         self.add_to_board(ship, new_coordinates)
 
@@ -113,7 +113,7 @@ class Game:
  
         for n in range(len(self.players)):
             player = self.players[n]
-            player_number = self.players[n].player_number
+            player_number = self.players[n].player_num
             coordinates = starting_coordinates[n]
             player.set_home_colony(coordinates)
             self.add_to_board(player.home_colony, coordinates)
@@ -141,13 +141,13 @@ class Game:
             self.logs.write('Attempted combat with dead ship stopped\n')
             return None
 
-        if attacker.player_number == defender.player_number:
+        if attacker.player_num == defender.player_num:
             self.logs.write('Attemped combat with own ship stopped\n')
             return None
 
         roll = random.randint(1, 10)
         new_atk = attacker.atk - defender.df
-        self.logs.write('\Player ' + str(attacker.player_number) + ' ' + str(attacker.name)+' ' + str(attacker.num) + ' attacking player '+str(defender.player_number)+' '+str(defender.name) + ' ' + str(defender.num) + '...')
+        self.logs.write('\Player ' + str(attacker.player_num) + ' ' + str(attacker.name)+' ' + str(attacker.ship_num) + ' attacking player '+str(defender.player_num)+' '+str(defender.name) + ' ' + str(defender.ship_num) + '...')
 
         if roll <= new_atk:
             self.logs.write('Hit!\n')
@@ -157,9 +157,9 @@ class Game:
         return False
 
     def remove_ship(self, ship):
-        player = self.players[ship.player_number - 1]
+        player = self.players[ship.player_num - 1]
         player.ships.remove(ship)
-        self.remove_from_board(ship, ship.coordinates)
+        self.remove_from_board(ship, ship.coords)
 
     def complete_movement_phase(self):
         if self.winner != None:
@@ -169,17 +169,17 @@ class Game:
 
         for player in self.players:
               if len(player.ships) == 0:
-                  self.logs.write('PLAYER ' + str(player.player_number) + ' HAS NO SHIPS\n\n')
+                  self.logs.write('PLAYER ' + str(player.player_num) + ' HAS NO SHIPS\n\n')
                   continue
 
-              self.logs.write('PLAYER ' + str(player.player_number) + ' MOVING:\n')
+              self.logs.write('PLAYER ' + str(player.player_num) + ' MOVING:\n')
   
               for ship in player.ships:
                 if self.is_enemy_in_translation(ship):
                     continue
 
-                options = self.get_in_bounds_translations(ship.__dict__['coordinates'])
-                move = player.select_translation(ship.__dict__, options)
+                options = self.get_in_bounds_translations(ship.__dict__['coords'])
+                move = player.choose_translation(ship.__dict__, options)
 
                 if move not in options:
                     self.logs.write('Illegal move\n')
@@ -208,24 +208,24 @@ class Game:
             self.logs.write('\Combat Order:\n')
 
             for ship in sorting:
-                self.logs.write('\t\Player ' + str(ship.player_number) + ' ' + str(ship.name) + ' ' + str(ship.num) + '\n')
+                self.logs.write('\t\Player ' + str(ship.player_num) + ' ' + str(ship.name) + ' ' + str(ship.ship_num) + '\n')
                 self.logs.write('\n\tStarting combat...\n\n')
 
             for ship in sorting:
                 if ship.hp <= 0:
                     continue
 
-                player = self.players[ship.player_number - 1]
-                opponents = [thing for thing in sorting if thing.player_number != ship.player_number and thing.hp > 0]
+                player = self.players[ship.player_num - 1]
+                opponents = [thing for thing in sorting if thing.player_num != ship.player_num and thing.hp > 0]
 
                 if len(opponents) == 0:
                     continue
 
-                targetid = player.select_target(ship.__dict__, [ship.__dict__ for ship in sorting])
+                targetid = player.choose_target(ship.__dict__, [ship.__dict__ for ship in sorting])
                 target = None
 
                 for option in opponents:
-                    if option.num == targetid:
+                    if option.ship_num == targetid:
                         target = option
 
                 if target not in opponents:
@@ -236,7 +236,7 @@ class Game:
                     target.hp -= 1
 
                     if target.hp <= 0:
-                        self.logs.write('\Player ' + str(target.player_number) + ' ' + str(target.name) + ' ' + str(target.num)+' was destroyed in combat\n')
+                        self.logs.write('\Player ' + str(target.player_num) + ' ' + str(target.name) + ' ' + str(target.ship_num)+' was destroyed in combat\n')
                         self.remove_ship(target)
 
                 self.get_simple_board()
@@ -245,7 +245,7 @@ class Game:
                 if ship.hp <= 0:
                     sorting.remove(ship)
 
-            if len(set([ship.player_number for ship in sorting])) == 1 or len(sorting) == 0:
+            if len(set([ship.player_num for ship in sorting])) == 1 or len(sorting) == 0:
                 dead_ship_coordinates.append(coordinate)
 
             self.logs.write('\n')
@@ -261,19 +261,19 @@ class Game:
             self.remove_ship(ship)
 
         for colony in player.colonies:
-            self.remove_from_board(colony, colony.coordinates)
+            self.remove_from_board(colony, colony.coords)
 
         self.players.remove(player)
-        self.remove_from_board(player.home_colony, player.home_colony.coordinates)
+        self.remove_from_board(player.home_colony, player.home_colony.coords)
 
     def check_for_winner(self):
         for player in self.players:
             if self.is_enemy_in_translation(player.home_colony):
-                self.logs.write('Player '+str(player.player_number)+' was removed from the game\n\n')
+                self.logs.write('Player '+str(player.player_num)+' was removed from the game\n\n')
                 self.remove_player(player)
 
         if len(self.players) == 1:
-            self.winner = self.players[0].player_number
+            self.winner = self.players[0].player_num
             self.logs.write('Player ' + str(self.winner)+' won')
 
         if len(self.players) == 0:

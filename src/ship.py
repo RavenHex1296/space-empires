@@ -3,7 +3,7 @@ class Ship:
         self.obj_type = 'Ship'
 
     def update_coordinates(self, new_coordinates):
-        self.coordinates = new_coordinates
+        self.coords = new_coordinates
 
 
 class Scout(Ship):
@@ -12,10 +12,10 @@ class Scout(Ship):
         self.atk = 3
         self.df = 0
         self.name = 'Scout'
-        self.player_number = player_number
+        self.player_num = player_number
         self.ship_class = "E"
-        self.coordinates = coordinates
-        self.num = num
+        self.coords = coordinates
+        self.ship_num = num
         Ship.__init__(self)
 
 
@@ -25,8 +25,8 @@ class BattleCruiser(Ship):
         self.atk = 5
         self.df = 1
         self.name = 'BattleCruiser'
-        self.player_number = player_number
+        self.player_num = player_number
         self.ship_class = "B"
-        self.coordinates = coordinates
-        self.num = num
+        self.coords = coordinates
+        self.ship_num = num
         Ship.__init__(self)
