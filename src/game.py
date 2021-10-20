@@ -1,6 +1,5 @@
 import math
 import sys
-import inspect
 import random
 sys.path.append('src')
 from logger import *
@@ -22,7 +21,7 @@ class Game:
         mid_x = (board_x + 1) // 2
         mid_y = (board_y + 1) // 2
 
-        self.board = {}
+        self.board = {(x, y): [] for x in range(board_x) for y in range(board_y)}
         self.turn = 1
         self.winner = None
  
@@ -94,7 +93,7 @@ class Game:
             self.board[coordinate].remove(obj)
 
             if len(self.board[coordinate]) == 0:
-                del self.board[coordinate]
+                self.board[coordinate] = []
 
     def move_ship(self, ship, translation):
         new_coordinates = (ship.coords[0] + translation[0], ship.coords[1] + translation[1])
@@ -193,6 +192,9 @@ class Game:
 
         self.logs.write('End turn ' + str(self.turn) + ' movement phase\n\n')
 
+    def get_all_ships(self, coordinate):
+        return [obj for obj in self.board[coordinate] if isinstance(obj, Ship)]
+
     def complete_combat_phase(self):
         if self.winner != None:
             return
@@ -203,8 +205,7 @@ class Game:
 
         for coordinate in self.combat_coordinates:
             self.logs.write('Combat at ' + str(coordinate) + ':\n\n')
-
-            sorting = sorted([obj for obj in self.board[coordinate] if isinstance(obj, Ship)], key=lambda x: x.ship_class)
+            sorting = sorted(self.get_all_ships(coordinate), key=lambda x: x.ship_class)
             self.logs.write('\Combat Order:\n')
 
             for ship in sorting:

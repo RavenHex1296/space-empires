@@ -18,7 +18,7 @@ class Player():
 
     def set_home_colony(self, coordinates):
         self.home_colony = Colony(self.player_num, coordinates)
-        self.home_colony.obj_type = 'HomeColony'
+        self.home_colony.is_home_colony = True
 
     def add_colonies(self, colonies):
         for colony in colonies:
@@ -28,7 +28,7 @@ class Player():
         self.player_num = n
 
     def choose_translation(self, ship_info, options):
-        return self.strategy.choose_translation(ship_info,options)
+        return self.strategy.choose_translation(ship_info, options)
     
     def choose_target(self, ship_info, combat_order):
         return self.strategy.choose_target(ship_info, combat_order)['ship_num']

@@ -7,6 +7,7 @@ from test_strategy import *
 from illegal_strategy import *
 from custom_strategy import *
 from maia import *
+from justin import *
 from logger import *
 from player import *
 from ship import *
@@ -61,10 +62,9 @@ game.run_to_completion()
 
 assert game.winner == 1
 print("PASSED")
-
 '''
 
-players = [Player(CustomStrategy()), Player(CustomStrategy())]
+players = [Player(CustomStrategy()), Player(StraightToEnemyColony())]
 game = Game(players)
 game.run_to_completion()
 print(game.winner)

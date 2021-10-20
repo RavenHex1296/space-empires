@@ -41,7 +41,7 @@ class CustomStrategy():
 
         for key in self.simple_board:
             for obj in self.simple_board[key]:
-                if obj['obj_type'] == 'HomeColony' and obj['player_num'] != ship_info['player_num']:
+                if obj['obj_type'] == 'Colony' and obj['player_num'] != ship_info['player_num'] and obj['is_home_colony'] == True:
                     opponent_home_colony.append(key)
 
         closest_colony = self.best_option(opponent_home_colony, ship_info['coords'])
@@ -57,4 +57,4 @@ class CustomStrategy():
         if len(enemies) == 1:
             return enemies[0]
 
-        return enemies[random.randint(0, len(enemies)-1)]
+        return enemies[random.randint(0, len(enemies) - 1)]
