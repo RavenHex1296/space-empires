@@ -15,6 +15,7 @@ class Game:
         self.set_player_numbers()
         self.board_size = board_size
         self.combat_coordinates = []
+        random.seed(3)
  
         global board_x, board_y, mid_x, mid_y
         board_x, board_y = board_size
@@ -205,54 +206,57 @@ class Game:
 
         for coordinate in self.combat_coordinates:
             self.logs.write('Combat at ' + str(coordinate) + ':\n\n')
-            sorting = sorted(self.get_all_ships(coordinate), key=lambda x: x.ship_class)
-            self.logs.write('\Combat Order:\n')
 
-            for ship in sorting:
-                self.logs.write('\t\Player ' + str(ship.player_num) + ' ' + str(ship.name) + ' ' + str(ship.ship_num) + '\n')
-                self.logs.write('\n\tStarting combat...\n\n')
+            while len(set([obj.player_num for obj in self.board[coordinate]])) != 1:
+                sorting = sorted(self.get_all_ships(coordinate), key=lambda x: x.ship_class)
+                self.logs.write('\Combat Order:\n')
 
-            for ship in sorting:
-                if ship.hp <= 0:
-                    continue
 
-                player = self.players[ship.player_num - 1]
-                opponents = [thing for thing in sorting if thing.player_num != ship.player_num and thing.hp > 0]
+                for ship in sorting:
+                    self.logs.write('\t\Player ' + str(ship.player_num) + ' ' + str(ship.name) + ' ' + str(ship.ship_num) + '\n')
+                    self.logs.write('\n\tStarting combat...\n\n')
 
-                if len(opponents) == 0:
-                    continue
+                for ship in sorting:
+                    if ship.hp <= 0:
+                        continue
 
-                targetid = player.choose_target(ship.__dict__, [ship.__dict__ for ship in sorting])
-                target = None
+                    player = self.players[ship.player_num - 1]
+                    opponents = [thing for thing in sorting if thing.player_num != ship.player_num and thing.hp > 0]
 
-                for option in opponents:
-                    if option.ship_num == targetid:
-                        target = option
+                    if len(opponents) == 0:
+                        continue
 
-                if target not in opponents:
-                    self.logs.write('Invalid target\n')
-                    continue
+                    targetid = player.choose_target(ship.__dict__, [ship.__dict__ for ship in sorting])
+                    target = None
 
-                if self.confirm_hit(ship, target):
-                    target.hp -= 1
+                    for option in opponents:
+                        if option.ship_num == targetid:
+                            target = option
 
-                    if target.hp <= 0:
-                        self.logs.write('\Player ' + str(target.player_num) + ' ' + str(target.name) + ' ' + str(target.ship_num)+' was destroyed in combat\n')
-                        self.remove_ship(target)
+                    if target not in opponents:
+                        self.logs.write('Invalid target\n')
+                        continue
 
-                self.get_simple_board()
+                    if self.confirm_hit(ship, target):
+                        target.hp -= 1
 
-            for ship in sorting:
-                if ship.hp <= 0:
-                    sorting.remove(ship)
+                        if target.hp <= 0:
+                            self.logs.write('\Player ' + str(target.player_num) + ' ' + str(target.name) + ' ' + str(target.ship_num)+' was destroyed in combat\n')
+                            self.remove_ship(target)
 
-            if len(set([ship.player_num for ship in sorting])) == 1 or len(sorting) == 0:
-                dead_ship_coordinates.append(coordinate)
+                    self.get_simple_board()
 
-            self.logs.write('\n')
+                for ship in sorting:
+                    if ship.hp <= 0:
+                        sorting.remove(ship)
 
-        for coordinate in dead_ship_coordinates:
-            self.combat_coordinates.remove(coordinate)
+                if len(set([ship.player_num for ship in sorting])) == 1 or len(sorting) == 0:
+                    dead_ship_coordinates.append(coordinate)
+
+                self.logs.write('\n')
+
+            for coordinate in dead_ship_coordinates:
+                self.combat_coordinates.remove(coordinate)
 
         self.logs.write('End turn ' + str(self.turn) + ' combat phase\n\n')
         self.turn += 1

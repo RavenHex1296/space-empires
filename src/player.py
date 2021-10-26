@@ -3,7 +3,7 @@ sys.path.append('src')
 import random
 from colony import *
 from ship import *
-
+import math
 
 class Player():
     def __init__(self, strategy):

@@ -1,6 +1,5 @@
 import sys
 sys.path.append('src')
-
 from game import *
 sys.path.append('src/strategies')
 from test_strategy import *
@@ -63,8 +62,12 @@ game.run_to_completion()
 assert game.winner == 1
 print("PASSED")
 '''
-
-players = [Player(CustomStrategy()), Player(StraightToEnemyColony())]
+players = [Player(MoveToClosestCol()), Player(MoveToEnemyHomeColony())]
 game = Game(players)
 game.run_to_completion()
-print(game.winner)
+print("Justin vs me:", game.winner)
+
+players = [Player(MoveToEnemyHomeColony()), Player(StraightToEnemyColony())]
+game = Game(players)
+game.run_to_completion()
+print("Me vs Maia:", game.winner)
