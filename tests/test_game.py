@@ -4,9 +4,12 @@ from game import *
 sys.path.append('src/strategies')
 from test_strategy import *
 from illegal_strategy import *
-from custom_strategy import *
+from me import *
 from maia import *
+from charlie import *
 from justin import *
+from william import *
+from anton import *
 from logger import *
 from player import *
 from ship import *
@@ -62,12 +65,28 @@ game.run_to_completion()
 assert game.winner == 1
 print("PASSED")
 '''
-players = [Player(MoveToClosestCol()), Player(MoveToEnemyHomeColony())]
+
+players = [Player(MoveToEnemyHomeColony()), Player(Custom())]
 game = Game(players)
 game.run_to_completion()
-print("Justin vs me:", game.winner)
+print("Me vs William:", game.winner)
 
 players = [Player(MoveToEnemyHomeColony()), Player(StraightToEnemyColony())]
 game = Game(players)
 game.run_to_completion()
 print("Me vs Maia:", game.winner)
+
+players = [Player(MoveToClosestCol()), Player(MoveToEnemyHomeColony())]
+game = Game(players)
+game.run_to_completion()
+print("Justin vs me:", game.winner)
+
+players = [Player(MoveToOpponent()), Player(MoveToEnemyHomeColony())]
+game = Game(players)
+game.run_to_completion()
+print("Charlie vs me:", game.winner)
+
+players = [Player(AntonStrat()), Player(MoveToEnemyHomeColony())]
+game = Game(players)
+game.run_to_completion()
+print("Anton vs me:", game.winner)

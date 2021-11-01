@@ -9,7 +9,7 @@ from colony import *
 
 class Game:
     def __init__(self, players, board_size=[7,7]):
-        self.logs = Logger('/home/runner/space-empires/logs/game_version_1.txt')
+        self.logs = Logger('/workspace/space-empires/logs/game_version_1.txt')
         self.logs.clear_log()
         self.players = players
         self.set_player_numbers()
@@ -193,6 +193,11 @@ class Game:
 
         self.logs.write('End turn ' + str(self.turn) + ' movement phase\n\n')
 
+    def dict_to_obj(self, input_dict):
+        for item in self.board[input_dict['coords']]:
+            if item.__dict__ == input_dict:
+                return item
+
     def get_all_ships(self, coordinate):
         return [obj for obj in self.board[coordinate] if isinstance(obj, Ship)]
 
@@ -209,11 +214,11 @@ class Game:
 
             while len(set([obj.player_num for obj in self.board[coordinate]])) != 1:
                 sorting = sorted(self.get_all_ships(coordinate), key=lambda x: x.ship_class)
-                self.logs.write('\Combat Order:\n')
+                self.logs.write('Combat Order:\n')
 
 
                 for ship in sorting:
-                    self.logs.write('\t\Player ' + str(ship.player_num) + ' ' + str(ship.name) + ' ' + str(ship.ship_num) + '\n')
+                    self.logs.write('\tPlayer ' + str(ship.player_num) + ' ' + str(ship.name) + ' ' + str(ship.ship_num) + '\n')
                     self.logs.write('\n\tStarting combat...\n\n')
 
                 for ship in sorting:
@@ -226,12 +231,8 @@ class Game:
                     if len(opponents) == 0:
                         continue
 
-                    targetid = player.choose_target(ship.__dict__, [ship.__dict__ for ship in sorting])
-                    target = None
-
-                    for option in opponents:
-                        if option.ship_num == targetid:
-                            target = option
+                    target_info = player.choose_target(ship.__dict__, [ship.__dict__ for ship in sorting])
+                    target = self.dict_to_obj(target_info)
 
                     if target not in opponents:
                         self.logs.write('Invalid target\n')
