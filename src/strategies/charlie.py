@@ -5,7 +5,7 @@ class MoveToOpponent:
         self.simple_board = None
 
     def current_dist(self, coords_1, choice, coords_2):
-        new_point = (coords_1[0] + choice[0], coords_1[0] + choice[1])
+        new_point = (coords_1[0] + choice[0], coords_1[1] + choice[1])
         return math.dist(new_point, coords_2)
 
     def min_distance_translation(self, ship_info, choices, target_coords):

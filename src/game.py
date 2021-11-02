@@ -6,6 +6,7 @@ from logger import *
 from ship import *
 from colony import *
 
+random.seed(3)
 
 class Game:
     def __init__(self, players, board_size=[7,7]):
@@ -15,7 +16,6 @@ class Game:
         self.set_player_numbers()
         self.board_size = board_size
         self.combat_coordinates = []
-        random.seed(3)
  
         global board_x, board_y, mid_x, mid_y
         board_x, board_y = board_size
@@ -65,7 +65,7 @@ class Game:
     def is_enemy_in_translation(self, ship):
         for item in self.board[ship.coords]:
             if item.player_num != ship.player_num:
-                if ship.coords not in self.combat_coordinates and isinstance(ship, Ship) and isinstance(item, Ship):
+                if ship.coords not in self.combat_coordinates and nstaisince(ship, Ship) and isinstance(item, Ship):
                     self.combat_coordinates.append(ship.coords)
 
                 return True
@@ -210,16 +210,14 @@ class Game:
         dead_ship_coordinates = []
 
         for coordinate in self.combat_coordinates:
-            self.logs.write('Combat at ' + str(coordinate) + ':\n\n')
+            sorting = sorted(self.get_all_ships(coordinate), key=lambda x: x.ship_class)
 
-            while len(set([obj.player_num for obj in self.board[coordinate]])) != 1:
-                sorting = sorted(self.get_all_ships(coordinate), key=lambda x: x.ship_class)
-                self.logs.write('Combat Order:\n')
-
+            while len(set([obj.player_num for obj in self.board[coordinate]])) != 1 and len(sorting) > 0:
+                self.logs.write('Combat at ' + str(coordinate) + ':\n\n')
+                self.logs.write('\Combar order:\n')
 
                 for ship in sorting:
-                    self.logs.write('\tPlayer ' + str(ship.player_num) + ' ' + str(ship.name) + ' ' + str(ship.ship_num) + '\n')
-                    self.logs.write('\n\tStarting combat...\n\n')
+                    self.logs.write('\n\tPlayer ' + str(ship.player_num) + ' ' + str(ship.name) + ' ' + str(ship.ship_num) + '\n')
 
                 for ship in sorting:
                     if ship.hp <= 0:

@@ -1,10 +1,8 @@
 import math, random
 
-class CustomStrategy():
+class Custom():
     def __init__(self):
         self.simple_board = None
-
-    def choose_translation(self, ship_info, possible_translations):
 
     def get_enemies(self, own_ship, combat_order):
         player_num = own_ship['player_num']
@@ -13,8 +11,15 @@ class CustomStrategy():
         for ship_info in combat_order:
             if ship_info['player_num'] != player_num and ship_info['hp'] > 0:
                 enemies.append(ship_info)
+
         return enemies
-    
+
+    def choose_translation(self, ship_info, possible_translations):
+        enemies = [ship for ship in self.simple_board if ship['player_num'] != ship_info['player_num'] and isinstance(ship, Ship)]
+
+        for enemy in enemies
+        
+
     def choose_target(self, ship_info, combat_order):
         enemies = self.get_enemies(ship_info, combat_order)
         optimal_enemies = []

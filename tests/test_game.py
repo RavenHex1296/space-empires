@@ -64,7 +64,6 @@ game.run_to_completion()
 
 assert game.winner == 1
 print("PASSED")
-'''
 
 players = [Player(MoveToEnemyHomeColony()), Player(Custom())]
 game = Game(players)
@@ -85,8 +84,9 @@ players = [Player(MoveToOpponent()), Player(MoveToEnemyHomeColony())]
 game = Game(players)
 game.run_to_completion()
 print("Charlie vs me:", game.winner)
+'''
 
-players = [Player(AntonStrat()), Player(MoveToEnemyHomeColony())]
+players = [Player(MoveToEnemyHomeColony()), Player(AntonStrat())]
 game = Game(players)
 game.run_to_completion()
 print("Anton vs me:", game.winner)
