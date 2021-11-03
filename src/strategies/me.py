@@ -12,7 +12,7 @@ class MoveToEnemyHomeColony():
         for option in options:
             if math.dist(option, coordinate) < min_distance:
                 best_option = option
-                min_distance = self.distance(option, coordinate)
+                min_distance = math.dist(option, coordinate)
 
         return best_option
 
