@@ -26,7 +26,7 @@ for coordinate in get_used_coordinates(board):
         simple_board[coordinate].append(obj.__dict__)
 
 print(simple_board, '\n')
-'''
+
 
 #if roll(1, 10) < atk.atk - df.df
 #scout_atk = 3 , scout_ hp = 1, scout_df = 0
@@ -77,3 +77,5 @@ for _ in range (n):
         data['miss'] += 1
 
 print("scout attacking scout", data, data['hit'] / (data['hit'] + data['miss']))
+'''
+print('A' > 'B')

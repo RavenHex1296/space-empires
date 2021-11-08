@@ -51,6 +51,5 @@ class MoveToEnemyHomeColony():
         return enemies
     
     def choose_target(self, ship_info, combat_order):
-        enemies_info = self.get_enemies(ship_info, combat_order)
-        target_info = enemies_info[random.randint(0, len(enemies_info)-1)]
-        return target_info
+        enemies = self.get_enemies(ship_info, combat_order)
+        return random.choice(enemies)

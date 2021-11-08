@@ -7,13 +7,14 @@ from ship import *
 from colony import *
 
 class Game:
-    def __init__(self, players, board_size=[7,7]):
+    def __init__(self, players, board_size=[7,7], max_turns):
         self.logs = Logger('/workspace/space-empires/logs/game_version_1.txt')
         self.logs.clear_log()
         self.players = players
         self.set_player_numbers()
         self.board_size = board_size
         self.combat_coordinates = []
+        self.max_turns = max_turns
  
         global board_x, board_y, mid_x, mid_y
         board_x, board_y = board_size
@@ -280,6 +281,10 @@ class Game:
 
         if len(self.players) == 0:
             self.logs.write('Tie')
+            self.winner = "Tie"
+
+        if self.turn > self.max_turns:
+            self.logs.write("Tie")
             self.winner = "Tie"
 
     def run_to_completion(self):
