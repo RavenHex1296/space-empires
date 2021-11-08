@@ -6,8 +6,6 @@ from logger import *
 from ship import *
 from colony import *
 
-random.seed(3)
-
 class Game:
     def __init__(self, players, board_size=[7,7]):
         self.logs = Logger('/workspace/space-empires/logs/game_version_1.txt')
@@ -65,7 +63,7 @@ class Game:
     def is_enemy_in_translation(self, ship):
         for item in self.board[ship.coords]:
             if item.player_num != ship.player_num:
-                if ship.coords not in self.combat_coordinates and nstaisince(ship, Ship) and isinstance(item, Ship):
+                if ship.coords not in self.combat_coordinates and isinstance(ship, Ship) and isinstance(item, Ship):
                     self.combat_coordinates.append(ship.coords)
 
                 return True
@@ -106,7 +104,7 @@ class Game:
         self.add_to_board(ship, new_coordinates)
 
     def initialize_game(self):
-        starting_coordinates = [(0, mid_x - 1), (board_y - 1, mid_x - 1), (mid_y - 1, 0), (mid_y - 1, board_x - 1)]
+        starting_coordinates = [(mid_y - 1, 0), (mid_y - 1, board_x - 1), (0, mid_x - 1), (board_y - 1, mid_x - 1)]
 
         self.logs.write(str(len(self.players)) + ' Players are playing\n')
         self.logs.write('INITIALIZING GAME...\n\n')
