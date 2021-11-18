@@ -131,3 +131,22 @@ for _ in range(25):
 print(total_sum1 / len(accuracies1), total_sum2 / len(accuracies2))
 '''
 
+win_data = {1: 0, 2: 0, "Tie": 0}
+for _ in range(50):
+    player_data = [Player(WilliamStrat()), Player(MoveToOpponent())]
+    game = Game(player_data)
+    game.run_to_completion()
+
+    win_data[game.winner] += 1
+
+print(win_data)
+
+win_data = {1: 0, 2: 0, "Tie": 0}
+for _ in range(50):
+    player_data = [Player(MoveToOpponent()), Player(WilliamStrat())]
+    game = Game(player_data)
+    game.run_to_completion()
+
+    win_data[game.winner] += 1
+
+print(win_data)

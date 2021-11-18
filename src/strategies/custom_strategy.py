@@ -84,3 +84,6 @@ class CaydenStrat():
         enemies = self.get_enemies(ship_info, combat_order)
         return enemies[-1]
 
+    def buy_ships(self, cp_budget):
+        ??
+

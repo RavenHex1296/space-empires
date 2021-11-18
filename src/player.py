@@ -6,12 +6,13 @@ from ship import *
 import math
 
 class Player():
-    def __init__(self, strategy):
+    def __init__(self, strategy, cp=None):
         self.player_num = None
         self.ships = []
         self.home_colony = None
         self.colonies = []
         self.strategy = strategy
+        self.cp = cp
 
     def add_ship(self, ship):
         self.ships.append(ship)
