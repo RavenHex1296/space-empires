@@ -6,7 +6,7 @@ from ship import *
 import math
 
 class Player():
-    def __init__(self, strategy, cp=None):
+    def __init__(self, strategy, cp=200):
         self.player_num = None
         self.ships = []
         self.home_colony = None
@@ -33,3 +33,6 @@ class Player():
     
     def choose_target(self, ship_info, combat_order):
         return self.strategy.choose_target(ship_info, combat_order)
+
+    def buy_ships(self, cp_budget):
+        return self.strategy.buy_ships(cp_budget)

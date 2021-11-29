@@ -4,16 +4,19 @@ import random
 sys.path.append('src')
 from logger import *
 from ship import *
+from ship_data import *
 from colony import *
 
 class Game:
-    def __init__(self, players, board_size=[7,7]):
+    def __init__(self, players, board_size=[7,7], max_turns=100, initial_cp=200):
         self.logs = Logger('/workspace/space-empires/logs/game_version_1.txt')
         self.logs.clear_log()
         self.players = players
         self.set_player_numbers()
         self.board_size = board_size
         self.combat_coordinates = []
+        self.max_turns = max_turns
+        self.initial_cp = initial_cp
  
         global board_x, board_y, mid_x, mid_y
         board_x, board_y = board_size
@@ -103,6 +106,26 @@ class Game:
         ship.update_coordinates(new_coordinates)
         self.add_to_board(ship, new_coordinates)
 
+    def get_ship_obj(self, ship_name, player_number, coordinates, ship_num):
+        if ship_name == 'Scout':
+            return Scout(player_number, coordinates, ship_num)
+
+        if ship_name == 'BattleCruiser':
+            return BattleCruiser(player_number, coordinates, ship_num)
+
+        if ship_name == 'BattleShip':
+            return BattleShip(player_number, coordinates, ship_num)
+
+        if ship_name == 'Cruiser':
+            return Cruiser(player_number, coordinates, ship_num)
+
+        if ship_name == 'Destroyer':
+            return Destroyer(player_number, coordinates, ship_num)
+
+        if ship_name == 'Dreadnaught':
+            return Dreadnaught(player_number, coordinates, ship_num)
+
+
     def initialize_game(self):
         starting_coordinates = [(mid_y - 1, 0), (mid_y - 1, board_x - 1), (0, mid_x - 1), (board_y - 1, mid_x - 1)]
 
@@ -117,14 +140,25 @@ class Game:
             self.add_to_board(player.home_colony, coordinates)
             self.logs.write('Player ' + str(player_number) + ' starting at ' + str(coordinates) + '\n')
 
-            for n in range(3):
-                scout = Scout(player_number, coordinates, n + 1)
-                battle_cruiser = BattleCruiser(player_number, coordinates, n + 1)
-                self.add_to_board(scout, coordinates)
-                self.add_to_board(battle_cruiser, coordinates)
+            initial_ships = player.buy_ships(self.initial_cp)
+            total_cp = 0
+            ships = []
 
-                player.add_ship(scout)
-                player.add_ship(battle_cruiser)
+            for ship_name in initial_ships:
+                for n in range(initial_ships[ship_name]):
+                    ship = self.get_ship_obj(ship_name, player_number, coordinates, n + 1)
+                    ships.append(ship)
+                    total_cp += ship.cp_cost
+
+            if total_cp <= self.initial_cp:
+                for ship in ships:
+                    player.add_ship(ship)
+                    self.add_to_board(ship, coordinates)
+
+                player.cp = player.cp - total_cp
+
+            else: 
+                self.logs.write('Went over CP budget, no ships given\n')
 
         self.logs.write('\n')
 
@@ -282,7 +316,7 @@ class Game:
             self.logs.write('Tie')
             self.winner = "Tie"
 
-        if self.turn > 100:
+        if self.turn > self.max_turns:
             self.logs.write("Tie")
             self.winner = "Tie"
 

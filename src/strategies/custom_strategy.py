@@ -1,4 +1,5 @@
 import math, random
+from ship_data import *
 
 class CaydenStrat():
     def __init__(self):
@@ -64,10 +65,11 @@ class CaydenStrat():
         best_translation = self.best_translation(possible_translations, ship_info['coords'], closest_colony)
 
         if self.is_enemy_in_translation(ship_info, best_translation):
-            return (0, 0)
+            return best_translation (0, 0)
 
         else:
             return best_translation
+
 
     def get_enemies(self, own_ship, combat_order):
         player_num = own_ship['player_num']
@@ -79,11 +81,10 @@ class CaydenStrat():
 
         return enemies
 
-
     def choose_target(self, ship_info, combat_order):
         enemies = self.get_enemies(ship_info, combat_order)
         return enemies[-1]
 
     def buy_ships(self, cp_budget):
-        ??
+        return {'Scout': 1, 'BattleCruiser': 1, 'BattleShip': 1, 'Cruiser': 1, 'Destroyer': 1, 'Dreadnaught': 1}
 
