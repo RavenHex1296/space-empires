@@ -86,4 +86,5 @@ class TestStrategy():
         return enemies[-1]
 
     def buy_ships(self, cp_budget):
-        return {'Scout': 20, 'BattleCruiser': 1}
+        return {'Dreadnaught': 8}
+        #{'Scout': 1, 'BattleCruiser': 1, 'Battleship': 1, 'Cruiser': 1, 'Destroyer': 1, 'Dreadnaught': 1}

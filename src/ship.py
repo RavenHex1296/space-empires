@@ -34,12 +34,12 @@ class BattleCruiser(Ship):
         Ship.__init__(self)
 
 
-class BattleShip(Ship):
+class Battleship(Ship):
     def __init__(self, player_number, coordinates, num=None):
         self.hp = 3
         self.atk = 5
         self.df = 2
-        self.name = 'BattleShip'
+        self.name = 'Battleship'
         self.player_num = player_number
         self.ship_class = "A"
         self.coords = coordinates

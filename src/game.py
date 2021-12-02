@@ -113,8 +113,8 @@ class Game:
         if ship_name == 'BattleCruiser':
             return BattleCruiser(player_number, coordinates, ship_num)
 
-        if ship_name == 'BattleShip':
-            return BattleShip(player_number, coordinates, ship_num)
+        if ship_name == 'Battleship':
+            return Battleship(player_number, coordinates, ship_num)
 
         if ship_name == 'Cruiser':
             return Cruiser(player_number, coordinates, ship_num)
@@ -181,7 +181,7 @@ class Game:
         new_atk = attacker.atk - defender.df
         self.logs.write('\Player ' + str(attacker.player_num) + ' ' + str(attacker.name)+' ' + str(attacker.ship_num) + ' attacking player '+str(defender.player_num)+' '+str(defender.name) + ' ' + str(defender.ship_num) + '...')
 
-        if roll <= new_atk:
+        if roll <= new_atk or roll == 1:
             self.logs.write('Hit!\n')
             return True
 
@@ -214,7 +214,7 @@ class Game:
                 move = player.choose_translation(ship.__dict__, options)
 
                 if move not in options:
-                    self.logs.write('Illegal move\n')
+                    self.logs.write('\tIllegal move\n')
                     continue
 
                 self.move_ship(ship, move)
@@ -246,7 +246,7 @@ class Game:
 
             while len(set([obj.player_num for obj in self.board[coordinate]])) != 1 and len(sorting) > 0:
                 self.logs.write('Combat at ' + str(coordinate) + ':\n\n')
-                self.logs.write('\Combar order:\n')
+                self.logs.write('\Combat order:\n')
 
                 for ship in sorting:
                     self.logs.write('\n\tPlayer ' + str(ship.player_num) + ' ' + str(ship.name) + ' ' + str(ship.ship_num) + '\n')

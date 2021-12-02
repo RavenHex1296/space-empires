@@ -7,35 +7,25 @@ Player 2 starting at (3, 6)
 Start turn 1 Movement phase
 
 PLAYER 1 MOVING:
-	Moving player 1 Scout 1: (3, 0) -> (3, 1)
-	Moving player 1 BattleCruiser 1: (3, 0) -> (3, 1)
-	Moving player 1 BattleShip 1: (3, 0) -> (3, 1)
-	Moving player 1 Cruiser 1: (3, 0) -> (3, 1)
-	Moving player 1 Destroyer 1: (3, 0) -> (3, 1)
 	Moving player 1 Dreadnaught 1: (3, 0) -> (3, 1)
+	Moving player 1 Dreadnaught 2: (3, 0) -> (3, 1)
+	Moving player 1 Dreadnaught 3: (3, 0) -> (3, 1)
+	Moving player 1 Dreadnaught 4: (3, 0) -> (3, 1)
+	Moving player 1 Dreadnaught 5: (3, 0) -> (3, 1)
+	Moving player 1 Dreadnaught 6: (3, 0) -> (3, 1)
+	Moving player 1 Dreadnaught 7: (3, 0) -> (3, 1)
+	Moving player 1 Dreadnaught 8: (3, 0) -> (3, 1)
 
 PLAYER 2 MOVING:
+	Moving player 2 Dreadnaught 1: (3, 6) -> (3, 5)
+	Moving player 2 Dreadnaught 2: (3, 6) -> (3, 5)
+	Moving player 2 Dreadnaught 3: (3, 6) -> (3, 5)
+	Moving player 2 Dreadnaught 4: (3, 6) -> (3, 5)
+	Moving player 2 Dreadnaught 5: (3, 6) -> (3, 5)
+	Moving player 2 Dreadnaught 6: (3, 6) -> (3, 5)
+	Moving player 2 Dreadnaught 7: (3, 6) -> (3, 5)
+	Moving player 2 Dreadnaught 8: (3, 6) -> (3, 5)
 	Moving player 2 Scout 1: (3, 6) -> (3, 5)
-	Moving player 2 Scout 2: (3, 6) -> (3, 5)
-	Moving player 2 Scout 3: (3, 6) -> (3, 5)
-	Moving player 2 Scout 4: (3, 6) -> (3, 5)
-	Moving player 2 Scout 5: (3, 6) -> (3, 5)
-	Moving player 2 Scout 6: (3, 6) -> (3, 5)
-	Moving player 2 Scout 7: (3, 6) -> (3, 5)
-	Moving player 2 Scout 8: (3, 6) -> (3, 5)
-	Moving player 2 Scout 9: (3, 6) -> (3, 5)
-	Moving player 2 Scout 10: (3, 6) -> (3, 5)
-	Moving player 2 Scout 11: (3, 6) -> (3, 5)
-	Moving player 2 Scout 12: (3, 6) -> (3, 5)
-	Moving player 2 Scout 13: (3, 6) -> (3, 5)
-	Moving player 2 Scout 14: (3, 6) -> (3, 5)
-	Moving player 2 Scout 15: (3, 6) -> (3, 5)
-	Moving player 2 Scout 16: (3, 6) -> (3, 5)
-	Moving player 2 Scout 17: (3, 6) -> (3, 5)
-	Moving player 2 Scout 18: (3, 6) -> (3, 5)
-	Moving player 2 Scout 19: (3, 6) -> (3, 5)
-	Moving player 2 Scout 20: (3, 6) -> (3, 5)
-	Moving player 2 BattleCruiser 1: (3, 6) -> (3, 5)
 
 End turn 1 movement phase
 
@@ -46,35 +36,25 @@ End turn 1 combat phase
 Start turn 2 Movement phase
 
 PLAYER 1 MOVING:
-	Moving player 1 Scout 1: (3, 1) -> (3, 2)
-	Moving player 1 BattleCruiser 1: (3, 1) -> (3, 2)
-	Moving player 1 BattleShip 1: (3, 1) -> (3, 2)
-	Moving player 1 Cruiser 1: (3, 1) -> (3, 2)
-	Moving player 1 Destroyer 1: (3, 1) -> (3, 2)
 	Moving player 1 Dreadnaught 1: (3, 1) -> (3, 2)
+	Moving player 1 Dreadnaught 2: (3, 1) -> (3, 2)
+	Moving player 1 Dreadnaught 3: (3, 1) -> (3, 2)
+	Moving player 1 Dreadnaught 4: (3, 1) -> (3, 2)
+	Moving player 1 Dreadnaught 5: (3, 1) -> (3, 2)
+	Moving player 1 Dreadnaught 6: (3, 1) -> (3, 2)
+	Moving player 1 Dreadnaught 7: (3, 1) -> (3, 2)
+	Moving player 1 Dreadnaught 8: (3, 1) -> (3, 2)
 
 PLAYER 2 MOVING:
+	Moving player 2 Dreadnaught 1: (3, 5) -> (3, 5)
+	Moving player 2 Dreadnaught 2: (3, 5) -> (3, 5)
+	Moving player 2 Dreadnaught 3: (3, 5) -> (3, 5)
+	Moving player 2 Dreadnaught 4: (3, 5) -> (3, 5)
+	Moving player 2 Dreadnaught 5: (3, 5) -> (3, 5)
+	Moving player 2 Dreadnaught 6: (3, 5) -> (3, 5)
+	Moving player 2 Dreadnaught 7: (3, 5) -> (3, 5)
+	Moving player 2 Dreadnaught 8: (3, 5) -> (3, 5)
 	Moving player 2 Scout 1: (3, 5) -> (3, 4)
-	Moving player 2 Scout 2: (3, 5) -> (3, 4)
-	Moving player 2 Scout 3: (3, 5) -> (3, 4)
-	Moving player 2 Scout 4: (3, 5) -> (3, 4)
-	Moving player 2 Scout 5: (3, 5) -> (3, 4)
-	Moving player 2 Scout 6: (3, 5) -> (3, 4)
-	Moving player 2 Scout 7: (3, 5) -> (3, 4)
-	Moving player 2 Scout 8: (3, 5) -> (3, 4)
-	Moving player 2 Scout 9: (3, 5) -> (3, 4)
-	Moving player 2 Scout 10: (3, 5) -> (3, 4)
-	Moving player 2 Scout 11: (3, 5) -> (3, 4)
-	Moving player 2 Scout 12: (3, 5) -> (3, 4)
-	Moving player 2 Scout 13: (3, 5) -> (3, 4)
-	Moving player 2 Scout 14: (3, 5) -> (3, 4)
-	Moving player 2 Scout 15: (3, 5) -> (3, 4)
-	Moving player 2 Scout 16: (3, 5) -> (3, 4)
-	Moving player 2 Scout 17: (3, 5) -> (3, 4)
-	Moving player 2 Scout 18: (3, 5) -> (3, 4)
-	Moving player 2 Scout 19: (3, 5) -> (3, 4)
-	Moving player 2 Scout 20: (3, 5) -> (3, 4)
-	Moving player 2 BattleCruiser 1: (3, 5) -> (3, 4)
 
 End turn 2 movement phase
 
@@ -85,890 +65,54 @@ End turn 2 combat phase
 Start turn 3 Movement phase
 
 PLAYER 1 MOVING:
-	Moving player 1 Scout 1: (3, 2) -> (3, 3)
-	Moving player 1 BattleCruiser 1: (3, 2) -> (3, 3)
-	Moving player 1 BattleShip 1: (3, 2) -> (3, 3)
-	Moving player 1 Cruiser 1: (3, 2) -> (3, 3)
-	Moving player 1 Destroyer 1: (3, 2) -> (3, 3)
 	Moving player 1 Dreadnaught 1: (3, 2) -> (3, 3)
+	Moving player 1 Dreadnaught 2: (3, 2) -> (3, 3)
+	Moving player 1 Dreadnaught 3: (3, 2) -> (3, 3)
+	Moving player 1 Dreadnaught 4: (3, 2) -> (3, 3)
+	Moving player 1 Dreadnaught 5: (3, 2) -> (3, 3)
+	Moving player 1 Dreadnaught 6: (3, 2) -> (3, 3)
+	Moving player 1 Dreadnaught 7: (3, 2) -> (3, 3)
+	Moving player 1 Dreadnaught 8: (3, 2) -> (3, 3)
 
 PLAYER 2 MOVING:
-	Moving player 2 Scout 1: (3, 4) -> (3, 3)
-	Moving player 2 Scout 2: (3, 4) -> (3, 3)
-	Moving player 2 Scout 3: (3, 4) -> (3, 3)
-	Moving player 2 Scout 4: (3, 4) -> (3, 3)
-	Moving player 2 Scout 5: (3, 4) -> (3, 3)
-	Moving player 2 Scout 6: (3, 4) -> (3, 3)
-	Moving player 2 Scout 7: (3, 4) -> (3, 3)
-	Moving player 2 Scout 8: (3, 4) -> (3, 3)
-	Moving player 2 Scout 9: (3, 4) -> (3, 3)
-	Moving player 2 Scout 10: (3, 4) -> (3, 3)
-	Moving player 2 Scout 11: (3, 4) -> (3, 3)
-	Moving player 2 Scout 12: (3, 4) -> (3, 3)
-	Moving player 2 Scout 13: (3, 4) -> (3, 3)
-	Moving player 2 Scout 14: (3, 4) -> (3, 3)
-	Moving player 2 Scout 15: (3, 4) -> (3, 3)
-	Moving player 2 Scout 16: (3, 4) -> (3, 3)
-	Moving player 2 Scout 17: (3, 4) -> (3, 3)
-	Moving player 2 Scout 18: (3, 4) -> (3, 3)
-	Moving player 2 Scout 19: (3, 4) -> (3, 3)
-	Moving player 2 Scout 20: (3, 4) -> (3, 3)
-	Moving player 2 BattleCruiser 1: (3, 4) -> (3, 3)
+	Moving player 2 Dreadnaught 1: (3, 5) -> (3, 5)
+	Moving player 2 Dreadnaught 2: (3, 5) -> (3, 5)
+	Moving player 2 Dreadnaught 3: (3, 5) -> (3, 5)
+	Moving player 2 Dreadnaught 4: (3, 5) -> (3, 5)
+	Moving player 2 Dreadnaught 5: (3, 5) -> (3, 5)
+	Moving player 2 Dreadnaught 6: (3, 5) -> (3, 5)
+	Moving player 2 Dreadnaught 7: (3, 5) -> (3, 5)
+	Moving player 2 Dreadnaught 8: (3, 5) -> (3, 5)
+	Moving player 2 Scout 1: (3, 4) -> (4, 4)
 
 End turn 3 movement phase
 
 Beginning of turn 3 combat phase
 
-Combat at (3, 3):
-
-\Combar order:
-
-	Player 1 BattleShip 1
-
-	Player 1 Dreadnaught 1
-
-	Player 1 BattleCruiser 1
-
-	Player 2 BattleCruiser 1
-
-	Player 1 Cruiser 1
-
-	Player 1 Destroyer 1
-
-	Player 1 Scout 1
-
-	Player 2 Scout 1
-
-	Player 2 Scout 2
-
-	Player 2 Scout 3
-
-	Player 2 Scout 4
-
-	Player 2 Scout 5
-
-	Player 2 Scout 6
-
-	Player 2 Scout 7
-
-	Player 2 Scout 8
-
-	Player 2 Scout 9
-
-	Player 2 Scout 10
-
-	Player 2 Scout 11
-
-	Player 2 Scout 12
-
-	Player 2 Scout 13
-
-	Player 2 Scout 14
-
-	Player 2 Scout 15
-
-	Player 2 Scout 16
-
-	Player 2 Scout 17
-
-	Player 2 Scout 18
-
-	Player 2 Scout 19
-
-	Player 2 Scout 20
-\Player 1 BattleShip 1 attacking player 2 Scout 20...Miss
-\Player 1 Dreadnaught 1 attacking player 2 Scout 20...Hit!
-\Player 2 Scout 20 was destroyed in combat
-\Player 1 BattleCruiser 1 attacking player 2 Scout 19...Hit!
-\Player 2 Scout 19 was destroyed in combat
-\Player 2 BattleCruiser 1 attacking player 1 Scout 1...Miss
-\Player 1 Cruiser 1 attacking player 2 Scout 18...Miss
-\Player 1 Destroyer 1 attacking player 2 Scout 18...Hit!
-\Player 2 Scout 18 was destroyed in combat
-\Player 1 Scout 1 attacking player 2 Scout 17...Miss
-\Player 2 Scout 1 attacking player 1 Scout 1...Hit!
-\Player 1 Scout 1 was destroyed in combat
-\Player 2 Scout 2 attacking player 1 Destroyer 1...Hit!
-\Player 1 Destroyer 1 was destroyed in combat
-\Player 2 Scout 3 attacking player 1 Cruiser 1...Miss
-\Player 2 Scout 4 attacking player 1 Cruiser 1...Miss
-\Player 2 Scout 5 attacking player 1 Cruiser 1...Hit!
-\Player 2 Scout 6 attacking player 1 Cruiser 1...Hit!
-\Player 1 Cruiser 1 was destroyed in combat
-\Player 2 Scout 7 attacking player 1 BattleCruiser 1...Miss
-\Player 2 Scout 8 attacking player 1 BattleCruiser 1...Hit!
-\Player 2 Scout 9 attacking player 1 BattleCruiser 1...Miss
-\Player 2 Scout 10 attacking player 1 BattleCruiser 1...Miss
-\Player 2 Scout 11 attacking player 1 BattleCruiser 1...Miss
-\Player 2 Scout 12 attacking player 1 BattleCruiser 1...Miss
-\Player 2 Scout 13 attacking player 1 BattleCruiser 1...Miss
-\Player 2 Scout 14 attacking player 1 BattleCruiser 1...Hit!
-\Player 1 BattleCruiser 1 was destroyed in combat
-\Player 2 Scout 15 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 16 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 17 attacking player 1 Dreadnaught 1...Miss
-
-Combat at (3, 3):
-
-\Combar order:
-
-	Player 1 BattleShip 1
-
-	Player 1 Dreadnaught 1
-
-	Player 2 BattleCruiser 1
-
-	Player 1 Destroyer 1
-
-	Player 2 Scout 1
-
-	Player 2 Scout 2
-
-	Player 2 Scout 3
-
-	Player 2 Scout 4
-
-	Player 2 Scout 5
-
-	Player 2 Scout 6
-
-	Player 2 Scout 7
-
-	Player 2 Scout 8
-
-	Player 2 Scout 9
-
-	Player 2 Scout 10
-
-	Player 2 Scout 11
-
-	Player 2 Scout 12
-
-	Player 2 Scout 13
-
-	Player 2 Scout 14
-
-	Player 2 Scout 15
-
-	Player 2 Scout 16
-
-	Player 2 Scout 17
-
-	Player 2 Scout 19
-\Player 1 BattleShip 1 attacking player 2 Scout 17...Miss
-\Player 1 Dreadnaught 1 attacking player 2 Scout 17...Miss
-\Player 2 BattleCruiser 1 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 1 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 2 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 3 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 4 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 5 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 6 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 7 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 8 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 9 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 10 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 11 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 12 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 13 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 14 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 15 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 16 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 17 attacking player 1 Dreadnaught 1...Miss
-
-Combat at (3, 3):
-
-\Combar order:
-
-	Player 1 BattleShip 1
-
-	Player 1 Dreadnaught 1
-
-	Player 2 BattleCruiser 1
-
-	Player 2 Scout 1
-
-	Player 2 Scout 2
-
-	Player 2 Scout 3
-
-	Player 2 Scout 4
-
-	Player 2 Scout 5
-
-	Player 2 Scout 6
-
-	Player 2 Scout 7
-
-	Player 2 Scout 8
-
-	Player 2 Scout 9
-
-	Player 2 Scout 10
-
-	Player 2 Scout 11
-
-	Player 2 Scout 12
-
-	Player 2 Scout 13
-
-	Player 2 Scout 14
-
-	Player 2 Scout 15
-
-	Player 2 Scout 16
-
-	Player 2 Scout 17
-\Player 1 BattleShip 1 attacking player 2 Scout 17...Miss
-\Player 1 Dreadnaught 1 attacking player 2 Scout 17...Hit!
-\Player 2 Scout 17 was destroyed in combat
-\Player 2 BattleCruiser 1 attacking player 1 Dreadnaught 1...Hit!
-\Player 2 Scout 1 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 2 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 3 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 4 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 5 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 6 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 7 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 8 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 9 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 10 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 11 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 12 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 13 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 14 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 15 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 16 attacking player 1 Dreadnaught 1...Miss
-
-Combat at (3, 3):
-
-\Combar order:
-
-	Player 1 BattleShip 1
-
-	Player 1 Dreadnaught 1
-
-	Player 2 BattleCruiser 1
-
-	Player 2 Scout 1
-
-	Player 2 Scout 2
-
-	Player 2 Scout 3
-
-	Player 2 Scout 4
-
-	Player 2 Scout 5
-
-	Player 2 Scout 6
-
-	Player 2 Scout 7
-
-	Player 2 Scout 8
-
-	Player 2 Scout 9
-
-	Player 2 Scout 10
-
-	Player 2 Scout 11
-
-	Player 2 Scout 12
-
-	Player 2 Scout 13
-
-	Player 2 Scout 14
-
-	Player 2 Scout 15
-
-	Player 2 Scout 16
-\Player 1 BattleShip 1 attacking player 2 Scout 16...Miss
-\Player 1 Dreadnaught 1 attacking player 2 Scout 16...Miss
-\Player 2 BattleCruiser 1 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 1 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 2 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 3 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 4 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 5 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 6 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 7 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 8 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 9 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 10 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 11 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 12 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 13 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 14 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 15 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 16 attacking player 1 Dreadnaught 1...Miss
-
-Combat at (3, 3):
-
-\Combar order:
-
-	Player 1 BattleShip 1
-
-	Player 1 Dreadnaught 1
-
-	Player 2 BattleCruiser 1
-
-	Player 2 Scout 1
-
-	Player 2 Scout 2
-
-	Player 2 Scout 3
-
-	Player 2 Scout 4
-
-	Player 2 Scout 5
-
-	Player 2 Scout 6
-
-	Player 2 Scout 7
-
-	Player 2 Scout 8
-
-	Player 2 Scout 9
-
-	Player 2 Scout 10
-
-	Player 2 Scout 11
-
-	Player 2 Scout 12
-
-	Player 2 Scout 13
-
-	Player 2 Scout 14
-
-	Player 2 Scout 15
-
-	Player 2 Scout 16
-\Player 1 BattleShip 1 attacking player 2 Scout 16...Hit!
-\Player 2 Scout 16 was destroyed in combat
-\Player 1 Dreadnaught 1 attacking player 2 Scout 15...Hit!
-\Player 2 Scout 15 was destroyed in combat
-\Player 2 BattleCruiser 1 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 1 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 2 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 3 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 4 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 5 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 6 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 7 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 8 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 9 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 10 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 11 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 12 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 13 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 14 attacking player 1 Dreadnaught 1...Miss
-
-Combat at (3, 3):
-
-\Combar order:
-
-	Player 1 BattleShip 1
-
-	Player 1 Dreadnaught 1
-
-	Player 2 BattleCruiser 1
-
-	Player 2 Scout 1
-
-	Player 2 Scout 2
-
-	Player 2 Scout 3
-
-	Player 2 Scout 4
-
-	Player 2 Scout 5
-
-	Player 2 Scout 6
-
-	Player 2 Scout 7
-
-	Player 2 Scout 8
-
-	Player 2 Scout 9
-
-	Player 2 Scout 10
-
-	Player 2 Scout 11
-
-	Player 2 Scout 12
-
-	Player 2 Scout 13
-
-	Player 2 Scout 14
-
-	Player 2 Scout 16
-\Player 1 BattleShip 1 attacking player 2 Scout 14...Miss
-\Player 1 Dreadnaught 1 attacking player 2 Scout 14...Hit!
-\Player 2 Scout 14 was destroyed in combat
-\Player 2 BattleCruiser 1 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 1 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 2 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 3 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 4 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 5 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 6 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 7 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 8 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 9 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 10 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 11 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 12 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 13 attacking player 1 Dreadnaught 1...Miss
-
-Combat at (3, 3):
-
-\Combar order:
-
-	Player 1 BattleShip 1
-
-	Player 1 Dreadnaught 1
-
-	Player 2 BattleCruiser 1
-
-	Player 2 Scout 1
-
-	Player 2 Scout 2
-
-	Player 2 Scout 3
-
-	Player 2 Scout 4
-
-	Player 2 Scout 5
-
-	Player 2 Scout 6
-
-	Player 2 Scout 7
-
-	Player 2 Scout 8
-
-	Player 2 Scout 9
-
-	Player 2 Scout 10
-
-	Player 2 Scout 11
-
-	Player 2 Scout 12
-
-	Player 2 Scout 13
-
-	Player 2 Scout 16
-\Player 1 BattleShip 1 attacking player 2 Scout 13...Miss
-\Player 1 Dreadnaught 1 attacking player 2 Scout 13...Hit!
-\Player 2 Scout 13 was destroyed in combat
-\Player 2 BattleCruiser 1 attacking player 1 Dreadnaught 1...Hit!
-\Player 2 Scout 1 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 2 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 3 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 4 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 5 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 6 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 7 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 8 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 9 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 10 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 11 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 12 attacking player 1 Dreadnaught 1...Miss
-
-Combat at (3, 3):
-
-\Combar order:
-
-	Player 1 BattleShip 1
-
-	Player 1 Dreadnaught 1
-
-	Player 2 BattleCruiser 1
-
-	Player 2 Scout 1
-
-	Player 2 Scout 2
-
-	Player 2 Scout 3
-
-	Player 2 Scout 4
-
-	Player 2 Scout 5
-
-	Player 2 Scout 6
-
-	Player 2 Scout 7
-
-	Player 2 Scout 8
-
-	Player 2 Scout 9
-
-	Player 2 Scout 10
-
-	Player 2 Scout 11
-
-	Player 2 Scout 12
-
-	Player 2 Scout 16
-\Player 1 BattleShip 1 attacking player 2 Scout 12...Miss
-\Player 1 Dreadnaught 1 attacking player 2 Scout 12...Miss
-\Player 2 BattleCruiser 1 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 1 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 2 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 3 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 4 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 5 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 6 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 7 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 8 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 9 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 10 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 11 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 12 attacking player 1 Dreadnaught 1...Miss
-
-Combat at (3, 3):
-
-\Combar order:
-
-	Player 1 BattleShip 1
-
-	Player 1 Dreadnaught 1
-
-	Player 2 BattleCruiser 1
-
-	Player 2 Scout 1
-
-	Player 2 Scout 2
-
-	Player 2 Scout 3
-
-	Player 2 Scout 4
-
-	Player 2 Scout 5
-
-	Player 2 Scout 6
-
-	Player 2 Scout 7
-
-	Player 2 Scout 8
-
-	Player 2 Scout 9
-
-	Player 2 Scout 10
-
-	Player 2 Scout 11
-
-	Player 2 Scout 12
-\Player 1 BattleShip 1 attacking player 2 Scout 12...Miss
-\Player 1 Dreadnaught 1 attacking player 2 Scout 12...Hit!
-\Player 2 Scout 12 was destroyed in combat
-\Player 2 BattleCruiser 1 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 1 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 2 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 3 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 4 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 5 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 6 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 7 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 8 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 9 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 10 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 11 attacking player 1 Dreadnaught 1...Miss
-
-Combat at (3, 3):
-
-\Combar order:
-
-	Player 1 BattleShip 1
-
-	Player 1 Dreadnaught 1
-
-	Player 2 BattleCruiser 1
-
-	Player 2 Scout 1
-
-	Player 2 Scout 2
-
-	Player 2 Scout 3
-
-	Player 2 Scout 4
-
-	Player 2 Scout 5
-
-	Player 2 Scout 6
-
-	Player 2 Scout 7
-
-	Player 2 Scout 8
-
-	Player 2 Scout 9
-
-	Player 2 Scout 10
-
-	Player 2 Scout 11
-\Player 1 BattleShip 1 attacking player 2 Scout 11...Hit!
-\Player 2 Scout 11 was destroyed in combat
-\Player 1 Dreadnaught 1 attacking player 2 Scout 10...Miss
-\Player 2 BattleCruiser 1 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 1 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 2 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 3 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 4 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 5 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 6 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 7 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 8 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 9 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 10 attacking player 1 Dreadnaught 1...Miss
-
-Combat at (3, 3):
-
-\Combar order:
-
-	Player 1 BattleShip 1
-
-	Player 1 Dreadnaught 1
-
-	Player 2 BattleCruiser 1
-
-	Player 2 Scout 1
-
-	Player 2 Scout 2
-
-	Player 2 Scout 3
-
-	Player 2 Scout 4
-
-	Player 2 Scout 5
-
-	Player 2 Scout 6
-
-	Player 2 Scout 7
-
-	Player 2 Scout 8
-
-	Player 2 Scout 9
-
-	Player 2 Scout 10
-\Player 1 BattleShip 1 attacking player 2 Scout 10...Hit!
-\Player 2 Scout 10 was destroyed in combat
-\Player 1 Dreadnaught 1 attacking player 2 Scout 9...Hit!
-\Player 2 Scout 9 was destroyed in combat
-\Player 2 BattleCruiser 1 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 1 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 2 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 3 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 4 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 5 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 6 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 7 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 8 attacking player 1 Dreadnaught 1...Miss
-
-Combat at (3, 3):
-
-\Combar order:
-
-	Player 1 BattleShip 1
-
-	Player 1 Dreadnaught 1
-
-	Player 2 BattleCruiser 1
-
-	Player 2 Scout 1
-
-	Player 2 Scout 2
-
-	Player 2 Scout 3
-
-	Player 2 Scout 4
-
-	Player 2 Scout 5
-
-	Player 2 Scout 6
-
-	Player 2 Scout 7
-
-	Player 2 Scout 8
-
-	Player 2 Scout 10
-\Player 1 BattleShip 1 attacking player 2 Scout 8...Miss
-\Player 1 Dreadnaught 1 attacking player 2 Scout 8...Hit!
-\Player 2 Scout 8 was destroyed in combat
-\Player 2 BattleCruiser 1 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 1 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 2 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 3 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 4 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 5 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 6 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 7 attacking player 1 Dreadnaught 1...Miss
-
-Combat at (3, 3):
-
-\Combar order:
-
-	Player 1 BattleShip 1
-
-	Player 1 Dreadnaught 1
-
-	Player 2 BattleCruiser 1
-
-	Player 2 Scout 1
-
-	Player 2 Scout 2
-
-	Player 2 Scout 3
-
-	Player 2 Scout 4
-
-	Player 2 Scout 5
-
-	Player 2 Scout 6
-
-	Player 2 Scout 7
-
-	Player 2 Scout 10
-\Player 1 BattleShip 1 attacking player 2 Scout 7...Hit!
-\Player 2 Scout 7 was destroyed in combat
-\Player 1 Dreadnaught 1 attacking player 2 Scout 6...Hit!
-\Player 2 Scout 6 was destroyed in combat
-\Player 2 BattleCruiser 1 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 1 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 2 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 3 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 4 attacking player 1 Dreadnaught 1...Miss
-\Player 2 Scout 5 attacking player 1 Dreadnaught 1...Miss
-
-Combat at (3, 3):
-
-\Combar order:
-
-	Player 1 BattleShip 1
-
-	Player 1 Dreadnaught 1
-
-	Player 2 BattleCruiser 1
-
-	Player 2 Scout 1
-
-	Player 2 Scout 2
-
-	Player 2 Scout 3
-
-	Player 2 Scout 4
-
-	Player 2 Scout 5
-
-	Player 2 Scout 7
-\Player 1 BattleShip 1 attacking player 2 Scout 5...Miss
-\Player 1 Dreadnaught 1 attacking player 2 Scout 5...Miss
-\Player 2 BattleCruiser 1 attacking player 1 Dreadnaught 1...Hit!
-\Player 1 Dreadnaught 1 was destroyed in combat
-\Player 2 Scout 1 attacking player 1 BattleShip 1...Miss
-\Player 2 Scout 2 attacking player 1 BattleShip 1...Hit!
-\Player 2 Scout 3 attacking player 1 BattleShip 1...Miss
-\Player 2 Scout 4 attacking player 1 BattleShip 1...Miss
-\Player 2 Scout 5 attacking player 1 BattleShip 1...Miss
-
-Combat at (3, 3):
-
-\Combar order:
-
-	Player 1 BattleShip 1
-
-	Player 2 BattleCruiser 1
-
-	Player 2 Scout 1
-
-	Player 2 Scout 2
-
-	Player 2 Scout 3
-
-	Player 2 Scout 4
-
-	Player 2 Scout 5
-\Player 1 BattleShip 1 attacking player 2 Scout 5...Hit!
-\Player 2 Scout 5 was destroyed in combat
-\Player 2 BattleCruiser 1 attacking player 1 BattleShip 1...Miss
-\Player 2 Scout 1 attacking player 1 BattleShip 1...Miss
-\Player 2 Scout 2 attacking player 1 BattleShip 1...Miss
-\Player 2 Scout 3 attacking player 1 BattleShip 1...Miss
-\Player 2 Scout 4 attacking player 1 BattleShip 1...Miss
-
-Combat at (3, 3):
-
-\Combar order:
-
-	Player 1 BattleShip 1
-
-	Player 2 BattleCruiser 1
-
-	Player 2 Scout 1
-
-	Player 2 Scout 2
-
-	Player 2 Scout 3
-
-	Player 2 Scout 4
-\Player 1 BattleShip 1 attacking player 2 Scout 4...Miss
-\Player 2 BattleCruiser 1 attacking player 1 BattleShip 1...Hit!
-\Player 2 Scout 1 attacking player 1 BattleShip 1...Miss
-\Player 2 Scout 2 attacking player 1 BattleShip 1...Miss
-\Player 2 Scout 3 attacking player 1 BattleShip 1...Miss
-\Player 2 Scout 4 attacking player 1 BattleShip 1...Miss
-
-Combat at (3, 3):
-
-\Combar order:
-
-	Player 1 BattleShip 1
-
-	Player 2 BattleCruiser 1
-
-	Player 2 Scout 1
-
-	Player 2 Scout 2
-
-	Player 2 Scout 3
-
-	Player 2 Scout 4
-\Player 1 BattleShip 1 attacking player 2 Scout 4...Miss
-\Player 2 BattleCruiser 1 attacking player 1 BattleShip 1...Miss
-\Player 2 Scout 1 attacking player 1 BattleShip 1...Miss
-\Player 2 Scout 2 attacking player 1 BattleShip 1...Miss
-\Player 2 Scout 3 attacking player 1 BattleShip 1...Miss
-\Player 2 Scout 4 attacking player 1 BattleShip 1...Miss
-
-Combat at (3, 3):
-
-\Combar order:
-
-	Player 1 BattleShip 1
-
-	Player 2 BattleCruiser 1
-
-	Player 2 Scout 1
-
-	Player 2 Scout 2
-
-	Player 2 Scout 3
-
-	Player 2 Scout 4
-\Player 1 BattleShip 1 attacking player 2 Scout 4...Miss
-\Player 2 BattleCruiser 1 attacking player 1 BattleShip 1...Miss
-\Player 2 Scout 1 attacking player 1 BattleShip 1...Hit!
-\Player 1 BattleShip 1 was destroyed in combat
-
 End turn 3 combat phase
 
 Start turn 4 Movement phase
 
-PLAYER 1 HAS NO SHIPS
+PLAYER 1 MOVING:
+	Moving player 1 Dreadnaught 1: (3, 3) -> (3, 4)
+	Moving player 1 Dreadnaught 2: (3, 3) -> (3, 4)
+	Moving player 1 Dreadnaught 3: (3, 3) -> (3, 4)
+	Moving player 1 Dreadnaught 4: (3, 3) -> (3, 4)
+	Moving player 1 Dreadnaught 5: (3, 3) -> (3, 4)
+	Moving player 1 Dreadnaught 6: (3, 3) -> (3, 4)
+	Moving player 1 Dreadnaught 7: (3, 3) -> (3, 4)
+	Moving player 1 Dreadnaught 8: (3, 3) -> (3, 4)
 
 PLAYER 2 MOVING:
-	Moving player 2 Scout 1: (3, 3) -> (3, 2)
-	Moving player 2 Scout 2: (3, 3) -> (3, 2)
-	Moving player 2 Scout 3: (3, 3) -> (3, 2)
-	Moving player 2 Scout 4: (3, 3) -> (3, 2)
-	Moving player 2 BattleCruiser 1: (3, 3) -> (3, 2)
+	Moving player 2 Dreadnaught 1: (3, 5) -> (3, 5)
+	Moving player 2 Dreadnaught 2: (3, 5) -> (3, 5)
+	Moving player 2 Dreadnaught 3: (3, 5) -> (3, 5)
+	Moving player 2 Dreadnaught 4: (3, 5) -> (3, 5)
+	Moving player 2 Dreadnaught 5: (3, 5) -> (3, 5)
+	Moving player 2 Dreadnaught 6: (3, 5) -> (3, 5)
+	Moving player 2 Dreadnaught 7: (3, 5) -> (3, 5)
+	Moving player 2 Dreadnaught 8: (3, 5) -> (3, 5)
+	Moving player 2 Scout 1: (4, 4) -> (4, 3)
 
 End turn 4 movement phase
 
@@ -978,18 +122,428 @@ End turn 4 combat phase
 
 Start turn 5 Movement phase
 
-PLAYER 1 HAS NO SHIPS
+PLAYER 1 MOVING:
+	Moving player 1 Dreadnaught 1: (3, 4) -> (3, 5)
+	Moving player 1 Dreadnaught 2: (3, 4) -> (3, 5)
+	Moving player 1 Dreadnaught 3: (3, 4) -> (3, 5)
+	Moving player 1 Dreadnaught 4: (3, 4) -> (3, 5)
+	Moving player 1 Dreadnaught 5: (3, 4) -> (3, 5)
+	Moving player 1 Dreadnaught 6: (3, 4) -> (3, 5)
+	Moving player 1 Dreadnaught 7: (3, 4) -> (3, 5)
+	Moving player 1 Dreadnaught 8: (3, 4) -> (3, 5)
 
 PLAYER 2 MOVING:
-	Moving player 2 Scout 1: (3, 2) -> (3, 1)
-	Moving player 2 Scout 2: (3, 2) -> (3, 1)
-	Moving player 2 Scout 3: (3, 2) -> (3, 1)
-	Moving player 2 Scout 4: (3, 2) -> (3, 1)
-	Moving player 2 BattleCruiser 1: (3, 2) -> (3, 1)
+	Moving player 2 Scout 1: (4, 3) -> (4, 2)
 
 End turn 5 movement phase
 
 Beginning of turn 5 combat phase
+
+Combat at (3, 5):
+
+\Combat order:
+
+	Player 2 Dreadnaught 1
+
+	Player 2 Dreadnaught 2
+
+	Player 2 Dreadnaught 3
+
+	Player 2 Dreadnaught 4
+
+	Player 2 Dreadnaught 5
+
+	Player 2 Dreadnaught 6
+
+	Player 2 Dreadnaught 7
+
+	Player 2 Dreadnaught 8
+
+	Player 1 Dreadnaught 1
+
+	Player 1 Dreadnaught 2
+
+	Player 1 Dreadnaught 3
+
+	Player 1 Dreadnaught 4
+
+	Player 1 Dreadnaught 5
+
+	Player 1 Dreadnaught 6
+
+	Player 1 Dreadnaught 7
+
+	Player 1 Dreadnaught 8
+\Player 2 Dreadnaught 1 attacking player 1 Dreadnaught 1...Miss
+\Player 2 Dreadnaught 2 attacking player 1 Dreadnaught 1...Miss
+\Player 2 Dreadnaught 3 attacking player 1 Dreadnaught 1...Hit!
+\Player 2 Dreadnaught 4 attacking player 1 Dreadnaught 1...Hit!
+\Player 2 Dreadnaught 5 attacking player 1 Dreadnaught 1...Miss
+\Player 2 Dreadnaught 6 attacking player 1 Dreadnaught 1...Hit!
+\Player 1 Dreadnaught 1 was destroyed in combat
+\Player 2 Dreadnaught 7 attacking player 1 Dreadnaught 2...Miss
+\Player 2 Dreadnaught 8 attacking player 1 Dreadnaught 2...Miss
+\Player 1 Dreadnaught 2 attacking player 2 Dreadnaught 8...Miss
+\Player 1 Dreadnaught 3 attacking player 2 Dreadnaught 8...Miss
+\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 8...Miss
+\Player 1 Dreadnaught 5 attacking player 2 Dreadnaught 8...Miss
+\Player 1 Dreadnaught 6 attacking player 2 Dreadnaught 8...Miss
+\Player 1 Dreadnaught 7 attacking player 2 Dreadnaught 8...Miss
+\Player 1 Dreadnaught 8 attacking player 2 Dreadnaught 8...Miss
+
+Combat at (3, 5):
+
+\Combat order:
+
+	Player 2 Dreadnaught 1
+
+	Player 2 Dreadnaught 2
+
+	Player 2 Dreadnaught 3
+
+	Player 2 Dreadnaught 4
+
+	Player 2 Dreadnaught 5
+
+	Player 2 Dreadnaught 6
+
+	Player 2 Dreadnaught 7
+
+	Player 2 Dreadnaught 8
+
+	Player 1 Dreadnaught 2
+
+	Player 1 Dreadnaught 3
+
+	Player 1 Dreadnaught 4
+
+	Player 1 Dreadnaught 5
+
+	Player 1 Dreadnaught 6
+
+	Player 1 Dreadnaught 7
+
+	Player 1 Dreadnaught 8
+\Player 2 Dreadnaught 1 attacking player 1 Dreadnaught 2...Miss
+\Player 2 Dreadnaught 2 attacking player 1 Dreadnaught 2...Miss
+\Player 2 Dreadnaught 3 attacking player 1 Dreadnaught 2...Hit!
+\Player 2 Dreadnaught 4 attacking player 1 Dreadnaught 2...Miss
+\Player 2 Dreadnaught 5 attacking player 1 Dreadnaught 2...Hit!
+\Player 2 Dreadnaught 6 attacking player 1 Dreadnaught 2...Miss
+\Player 2 Dreadnaught 7 attacking player 1 Dreadnaught 2...Hit!
+\Player 1 Dreadnaught 2 was destroyed in combat
+\Player 2 Dreadnaught 8 attacking player 1 Dreadnaught 3...Hit!
+\Player 1 Dreadnaught 3 attacking player 2 Dreadnaught 8...Miss
+\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 8...Miss
+\Player 1 Dreadnaught 5 attacking player 2 Dreadnaught 8...Miss
+\Player 1 Dreadnaught 6 attacking player 2 Dreadnaught 8...Miss
+\Player 1 Dreadnaught 7 attacking player 2 Dreadnaught 8...Miss
+\Player 1 Dreadnaught 8 attacking player 2 Dreadnaught 8...Miss
+
+Combat at (3, 5):
+
+\Combat order:
+
+	Player 2 Dreadnaught 1
+
+	Player 2 Dreadnaught 2
+
+	Player 2 Dreadnaught 3
+
+	Player 2 Dreadnaught 4
+
+	Player 2 Dreadnaught 5
+
+	Player 2 Dreadnaught 6
+
+	Player 2 Dreadnaught 7
+
+	Player 2 Dreadnaught 8
+
+	Player 1 Dreadnaught 3
+
+	Player 1 Dreadnaught 4
+
+	Player 1 Dreadnaught 5
+
+	Player 1 Dreadnaught 6
+
+	Player 1 Dreadnaught 7
+
+	Player 1 Dreadnaught 8
+\Player 2 Dreadnaught 1 attacking player 1 Dreadnaught 3...Hit!
+\Player 2 Dreadnaught 2 attacking player 1 Dreadnaught 3...Hit!
+\Player 1 Dreadnaught 3 was destroyed in combat
+\Player 2 Dreadnaught 3 attacking player 1 Dreadnaught 4...Miss
+\Player 2 Dreadnaught 4 attacking player 1 Dreadnaught 4...Miss
+\Player 2 Dreadnaught 5 attacking player 1 Dreadnaught 4...Miss
+\Player 2 Dreadnaught 6 attacking player 1 Dreadnaught 4...Hit!
+\Player 2 Dreadnaught 7 attacking player 1 Dreadnaught 4...Miss
+\Player 2 Dreadnaught 8 attacking player 1 Dreadnaught 4...Miss
+\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 8...Hit!
+\Player 1 Dreadnaught 5 attacking player 2 Dreadnaught 8...Miss
+\Player 1 Dreadnaught 6 attacking player 2 Dreadnaught 8...Miss
+\Player 1 Dreadnaught 7 attacking player 2 Dreadnaught 8...Miss
+\Player 1 Dreadnaught 8 attacking player 2 Dreadnaught 8...Miss
+
+Combat at (3, 5):
+
+\Combat order:
+
+	Player 2 Dreadnaught 1
+
+	Player 2 Dreadnaught 2
+
+	Player 2 Dreadnaught 3
+
+	Player 2 Dreadnaught 4
+
+	Player 2 Dreadnaught 5
+
+	Player 2 Dreadnaught 6
+
+	Player 2 Dreadnaught 7
+
+	Player 2 Dreadnaught 8
+
+	Player 1 Dreadnaught 4
+
+	Player 1 Dreadnaught 5
+
+	Player 1 Dreadnaught 6
+
+	Player 1 Dreadnaught 7
+
+	Player 1 Dreadnaught 8
+\Player 2 Dreadnaught 1 attacking player 1 Dreadnaught 4...Miss
+\Player 2 Dreadnaught 2 attacking player 1 Dreadnaught 4...Miss
+\Player 2 Dreadnaught 3 attacking player 1 Dreadnaught 4...Miss
+\Player 2 Dreadnaught 4 attacking player 1 Dreadnaught 4...Miss
+\Player 2 Dreadnaught 5 attacking player 1 Dreadnaught 4...Miss
+\Player 2 Dreadnaught 6 attacking player 1 Dreadnaught 4...Miss
+\Player 2 Dreadnaught 7 attacking player 1 Dreadnaught 4...Hit!
+\Player 2 Dreadnaught 8 attacking player 1 Dreadnaught 4...Hit!
+\Player 1 Dreadnaught 4 was destroyed in combat
+\Player 1 Dreadnaught 5 attacking player 2 Dreadnaught 8...Hit!
+\Player 1 Dreadnaught 6 attacking player 2 Dreadnaught 8...Miss
+\Player 1 Dreadnaught 7 attacking player 2 Dreadnaught 8...Hit!
+\Player 2 Dreadnaught 8 was destroyed in combat
+\Player 1 Dreadnaught 8 attacking player 2 Dreadnaught 7...Hit!
+
+Combat at (3, 5):
+
+\Combat order:
+
+	Player 2 Dreadnaught 1
+
+	Player 2 Dreadnaught 2
+
+	Player 2 Dreadnaught 3
+
+	Player 2 Dreadnaught 4
+
+	Player 2 Dreadnaught 5
+
+	Player 2 Dreadnaught 6
+
+	Player 2 Dreadnaught 7
+
+	Player 1 Dreadnaught 4
+
+	Player 1 Dreadnaught 5
+
+	Player 1 Dreadnaught 6
+
+	Player 1 Dreadnaught 7
+
+	Player 1 Dreadnaught 8
+\Player 2 Dreadnaught 1 attacking player 1 Dreadnaught 5...Miss
+\Player 2 Dreadnaught 2 attacking player 1 Dreadnaught 5...Miss
+\Player 2 Dreadnaught 3 attacking player 1 Dreadnaught 5...Miss
+\Player 2 Dreadnaught 4 attacking player 1 Dreadnaught 5...Miss
+\Player 2 Dreadnaught 5 attacking player 1 Dreadnaught 5...Miss
+\Player 2 Dreadnaught 6 attacking player 1 Dreadnaught 5...Miss
+\Player 2 Dreadnaught 7 attacking player 1 Dreadnaught 5...Miss
+\Player 1 Dreadnaught 5 attacking player 2 Dreadnaught 7...Miss
+\Player 1 Dreadnaught 6 attacking player 2 Dreadnaught 7...Hit!
+\Player 1 Dreadnaught 7 attacking player 2 Dreadnaught 7...Miss
+\Player 1 Dreadnaught 8 attacking player 2 Dreadnaught 7...Miss
+
+Combat at (3, 5):
+
+\Combat order:
+
+	Player 2 Dreadnaught 1
+
+	Player 2 Dreadnaught 2
+
+	Player 2 Dreadnaught 3
+
+	Player 2 Dreadnaught 4
+
+	Player 2 Dreadnaught 5
+
+	Player 2 Dreadnaught 6
+
+	Player 2 Dreadnaught 7
+
+	Player 1 Dreadnaught 5
+
+	Player 1 Dreadnaught 6
+
+	Player 1 Dreadnaught 7
+
+	Player 1 Dreadnaught 8
+\Player 2 Dreadnaught 1 attacking player 1 Dreadnaught 5...Hit!
+\Player 2 Dreadnaught 2 attacking player 1 Dreadnaught 5...Hit!
+\Player 2 Dreadnaught 3 attacking player 1 Dreadnaught 5...Miss
+\Player 2 Dreadnaught 4 attacking player 1 Dreadnaught 5...Miss
+\Player 2 Dreadnaught 5 attacking player 1 Dreadnaught 5...Hit!
+\Player 1 Dreadnaught 5 was destroyed in combat
+\Player 2 Dreadnaught 6 attacking player 1 Dreadnaught 6...Miss
+\Player 2 Dreadnaught 7 attacking player 1 Dreadnaught 6...Miss
+\Player 1 Dreadnaught 6 attacking player 2 Dreadnaught 7...Miss
+\Player 1 Dreadnaught 7 attacking player 2 Dreadnaught 7...Miss
+\Player 1 Dreadnaught 8 attacking player 2 Dreadnaught 7...Hit!
+\Player 2 Dreadnaught 7 was destroyed in combat
+
+Combat at (3, 5):
+
+\Combat order:
+
+	Player 2 Dreadnaught 1
+
+	Player 2 Dreadnaught 2
+
+	Player 2 Dreadnaught 3
+
+	Player 2 Dreadnaught 4
+
+	Player 2 Dreadnaught 5
+
+	Player 2 Dreadnaught 6
+
+	Player 1 Dreadnaught 5
+
+	Player 1 Dreadnaught 6
+
+	Player 1 Dreadnaught 7
+
+	Player 1 Dreadnaught 8
+\Player 2 Dreadnaught 1 attacking player 1 Dreadnaught 6...Miss
+\Player 2 Dreadnaught 2 attacking player 1 Dreadnaught 6...Miss
+\Player 2 Dreadnaught 3 attacking player 1 Dreadnaught 6...Hit!
+\Player 2 Dreadnaught 4 attacking player 1 Dreadnaught 6...Miss
+\Player 2 Dreadnaught 5 attacking player 1 Dreadnaught 6...Hit!
+\Player 2 Dreadnaught 6 attacking player 1 Dreadnaught 6...Miss
+\Player 1 Dreadnaught 6 attacking player 2 Dreadnaught 6...Miss
+\Player 1 Dreadnaught 7 attacking player 2 Dreadnaught 6...Miss
+\Player 1 Dreadnaught 8 attacking player 2 Dreadnaught 6...Miss
+
+Combat at (3, 5):
+
+\Combat order:
+
+	Player 2 Dreadnaught 1
+
+	Player 2 Dreadnaught 2
+
+	Player 2 Dreadnaught 3
+
+	Player 2 Dreadnaught 4
+
+	Player 2 Dreadnaught 5
+
+	Player 2 Dreadnaught 6
+
+	Player 1 Dreadnaught 6
+
+	Player 1 Dreadnaught 7
+
+	Player 1 Dreadnaught 8
+\Player 2 Dreadnaught 1 attacking player 1 Dreadnaught 6...Hit!
+\Player 1 Dreadnaught 6 was destroyed in combat
+\Player 2 Dreadnaught 2 attacking player 1 Dreadnaught 7...Miss
+\Player 2 Dreadnaught 3 attacking player 1 Dreadnaught 7...Hit!
+\Player 2 Dreadnaught 4 attacking player 1 Dreadnaught 7...Miss
+\Player 2 Dreadnaught 5 attacking player 1 Dreadnaught 7...Hit!
+\Player 2 Dreadnaught 6 attacking player 1 Dreadnaught 7...Miss
+\Player 1 Dreadnaught 7 attacking player 2 Dreadnaught 6...Hit!
+\Player 1 Dreadnaught 8 attacking player 2 Dreadnaught 6...Miss
+
+Combat at (3, 5):
+
+\Combat order:
+
+	Player 2 Dreadnaught 1
+
+	Player 2 Dreadnaught 2
+
+	Player 2 Dreadnaught 3
+
+	Player 2 Dreadnaught 4
+
+	Player 2 Dreadnaught 5
+
+	Player 2 Dreadnaught 6
+
+	Player 1 Dreadnaught 7
+
+	Player 1 Dreadnaught 8
+\Player 2 Dreadnaught 1 attacking player 1 Dreadnaught 7...Miss
+\Player 2 Dreadnaught 2 attacking player 1 Dreadnaught 7...Miss
+\Player 2 Dreadnaught 3 attacking player 1 Dreadnaught 7...Hit!
+\Player 1 Dreadnaught 7 was destroyed in combat
+\Player 2 Dreadnaught 4 attacking player 1 Dreadnaught 8...Miss
+\Player 2 Dreadnaught 5 attacking player 1 Dreadnaught 8...Miss
+\Player 2 Dreadnaught 6 attacking player 1 Dreadnaught 8...Miss
+\Player 1 Dreadnaught 8 attacking player 2 Dreadnaught 6...Hit!
+
+Combat at (3, 5):
+
+\Combat order:
+
+	Player 2 Dreadnaught 1
+
+	Player 2 Dreadnaught 2
+
+	Player 2 Dreadnaught 3
+
+	Player 2 Dreadnaught 4
+
+	Player 2 Dreadnaught 5
+
+	Player 2 Dreadnaught 6
+
+	Player 1 Dreadnaught 8
+\Player 2 Dreadnaught 1 attacking player 1 Dreadnaught 8...Miss
+\Player 2 Dreadnaught 2 attacking player 1 Dreadnaught 8...Hit!
+\Player 2 Dreadnaught 3 attacking player 1 Dreadnaught 8...Miss
+\Player 2 Dreadnaught 4 attacking player 1 Dreadnaught 8...Miss
+\Player 2 Dreadnaught 5 attacking player 1 Dreadnaught 8...Hit!
+\Player 2 Dreadnaught 6 attacking player 1 Dreadnaught 8...Miss
+\Player 1 Dreadnaught 8 attacking player 2 Dreadnaught 6...Hit!
+\Player 2 Dreadnaught 6 was destroyed in combat
+
+Combat at (3, 5):
+
+\Combat order:
+
+	Player 2 Dreadnaught 1
+
+	Player 2 Dreadnaught 2
+
+	Player 2 Dreadnaught 3
+
+	Player 2 Dreadnaught 4
+
+	Player 2 Dreadnaught 5
+
+	Player 1 Dreadnaught 8
+\Player 2 Dreadnaught 1 attacking player 1 Dreadnaught 8...Miss
+\Player 2 Dreadnaught 2 attacking player 1 Dreadnaught 8...Miss
+\Player 2 Dreadnaught 3 attacking player 1 Dreadnaught 8...Hit!
+\Player 1 Dreadnaught 8 was destroyed in combat
 
 End turn 5 combat phase
 
@@ -998,17 +552,54 @@ Start turn 6 Movement phase
 PLAYER 1 HAS NO SHIPS
 
 PLAYER 2 MOVING:
-	Moving player 2 Scout 1: (3, 1) -> (3, 0)
-	Moving player 2 Scout 2: (3, 1) -> (3, 0)
-	Moving player 2 Scout 3: (3, 1) -> (3, 0)
-	Moving player 2 Scout 4: (3, 1) -> (3, 0)
-	Moving player 2 BattleCruiser 1: (3, 1) -> (3, 0)
+	Moving player 2 Dreadnaught 1: (3, 5) -> (3, 4)
+	Moving player 2 Dreadnaught 2: (3, 5) -> (3, 4)
+	Moving player 2 Dreadnaught 3: (3, 5) -> (3, 4)
+	Moving player 2 Dreadnaught 4: (3, 5) -> (3, 4)
+	Moving player 2 Dreadnaught 5: (3, 5) -> (3, 4)
+	Moving player 2 Scout 1: (4, 2) -> (4, 1)
 
 End turn 6 movement phase
 
 Beginning of turn 6 combat phase
 
 End turn 6 combat phase
+
+Start turn 7 Movement phase
+
+PLAYER 1 HAS NO SHIPS
+
+PLAYER 2 MOVING:
+	Moving player 2 Dreadnaught 1: (3, 4) -> (3, 3)
+	Moving player 2 Dreadnaught 2: (3, 4) -> (3, 3)
+	Moving player 2 Dreadnaught 3: (3, 4) -> (3, 3)
+	Moving player 2 Dreadnaught 4: (3, 4) -> (3, 3)
+	Moving player 2 Dreadnaught 5: (3, 4) -> (3, 3)
+	Moving player 2 Scout 1: (4, 1) -> (4, 0)
+
+End turn 7 movement phase
+
+Beginning of turn 7 combat phase
+
+End turn 7 combat phase
+
+Start turn 8 Movement phase
+
+PLAYER 1 HAS NO SHIPS
+
+PLAYER 2 MOVING:
+	Moving player 2 Dreadnaught 1: (3, 3) -> (3, 2)
+	Moving player 2 Dreadnaught 2: (3, 3) -> (3, 2)
+	Moving player 2 Dreadnaught 3: (3, 3) -> (3, 2)
+	Moving player 2 Dreadnaught 4: (3, 3) -> (3, 2)
+	Moving player 2 Dreadnaught 5: (3, 3) -> (3, 2)
+	Moving player 2 Scout 1: (4, 0) -> (3, 0)
+
+End turn 8 movement phase
+
+Beginning of turn 8 combat phase
+
+End turn 8 combat phase
 
 Player 1 was removed from the game
 

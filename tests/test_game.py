@@ -88,49 +88,30 @@ game.run_to_completion()
 print("Charlie vs me:", game.winner)
 '''
 
-'''
+
 def simulate_me_vs_other(num_games):
-    win_data = {1: 0, 2: 0}
+    win_data = {1: 0, 2: 0, "Tie": 0}
 
     for _ in range(num_games):
-        players = [Player(CaydenStrat()), Player(MoveToEnemyHomeColony())]
+        players = [Player(CaydenStrat()), Player(TestStrategy())]
         game = Game(players)
         game.run_to_completion()
 
         win_data[game.winner] += 1
 
-    return win_data[1] / (win_data[1] + win_data[2])
+    return win_data[1] / (win_data[1] + win_data[2] + win_data['Tie'])
 
 def simulateother_vs_me(num_games):
-    win_data = {1: 0, 2: 0}
+    win_data = {1: 0, 2: 0, "Tie": 0}
 
     for _ in range(num_games):
-        players = [Player(MoveToEnemyHomeColony()), Player(CaydenStrat())]
+        players = [Player(TestStrategy()), Player(CaydenStrat())]
         game = Game(players)
         game.run_to_completion()
 
         win_data[game.winner] += 1
 
-    return win_data[2] / (win_data[1] + win_data[2])
+    return win_data[2] / (win_data[1] + win_data[2] + win_data['Tie'])
 
 
-accuracies1 = []
-total_sum1 = 0
-total_sum2 = 0
-accuracies2 = []
-
-for _ in range(25):
-    simulation1 = simulate_me_vs_other(100)
-    accuracies1.append(simulation1)
-    total_sum1 += simulation1
-
-    simulation2 = simulateother_vs_me(100)
-    accuracies2.append(simulation2)
-    total_sum2 += simulation2
-
-print(total_sum1 / len(accuracies1), total_sum2 / len(accuracies2))
-'''
-
-player_data = [Player(CaydenStrat()), Player(TestStrategy())]
-game = Game(player_data)
-game.run_to_completion()
+print("Me vs Other:", simulate_me_vs_other(1000), '\n', 'Other vs Me:', simulateother_vs_me(1000))
