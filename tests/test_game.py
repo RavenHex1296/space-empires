@@ -88,7 +88,7 @@ game.run_to_completion()
 print("Charlie vs me:", game.winner)
 '''
 
-
+'''
 def simulate_me_vs_other(num_games):
     win_data = {1: 0, 2: 0, "Tie": 0}
 
@@ -115,3 +115,25 @@ def simulateother_vs_me(num_games):
 
 
 print("Me vs Other:", simulate_me_vs_other(1000), '\n', 'Other vs Me:', simulateother_vs_me(1000))
+'''
+
+
+win_data = {1: 0, 2: 0, "Tie": 0}
+
+for _ in range(50):
+    players = [Player(MaiaStrat()), Player(CaydenStrat())]
+    game = Game(players)
+    game.run_to_completion()
+    win_data[game.winner] += 1
+
+print(win_data)
+
+win_data = {1: 0, 2: 0, "Tie": 0}
+
+for _ in range(50):
+    players = [Player(CaydenStrat()), Player(MaiaStrat())]
+    game = Game(players)
+    game.run_to_completion()
+    win_data[game.winner] += 1
+
+print(win_data)

@@ -17,6 +17,7 @@ class Scout(Ship):
         self.coords = coordinates
         self.ship_num = num
         self.cp_cost = 6
+        self.maint_cost = 1
         Ship.__init__(self)
 
 
@@ -31,6 +32,7 @@ class BattleCruiser(Ship):
         self.coords = coordinates
         self.ship_num = num
         self.cp_cost = 15
+        self.maint_cost = 2
         Ship.__init__(self)
 
 
@@ -45,6 +47,7 @@ class Battleship(Ship):
         self.coords = coordinates
         self.ship_num = num
         self.cp_cost = 20
+        self.maint_cost = 3
         Ship.__init__(self)
 
 class Cruiser(Ship):
@@ -58,6 +61,7 @@ class Cruiser(Ship):
         self.coords = coordinates
         self.ship_num = num
         self.cp_cost = 12
+        self.maint_cost = 2
         Ship.__init__(self)
 
 
@@ -72,6 +76,7 @@ class Destroyer(Ship):
         self.coords = coordinates
         self.ship_num = num
         self.cp_cost = 9
+        self.maint_cost = 1
         Ship.__init__(self)
 
 
@@ -86,4 +91,5 @@ class Dreadnaught(Ship):
         self.coords = coordinates
         self.ship_num = num
         self.cp_cost = 24
+        self.maint_cost = 3
         Ship.__init__(self)

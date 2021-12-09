@@ -8,7 +8,7 @@ from ship_data import *
 from colony import *
 
 class Game:
-    def __init__(self, players, board_size=[7,7], max_turns=100, initial_cp=200):
+    def __init__(self, players, board_size=[7,7], max_turns=100, initial_cp=150):
         self.logs = Logger('/workspace/space-empires/logs/game_version_1.txt')
         self.logs.clear_log()
         self.players = players
@@ -64,14 +64,16 @@ class Game:
         return in_bounds_translations
 
     def is_enemy_in_translation(self, ship):
+        enemy_present = False
+
         for item in self.board[ship.coords]:
             if item.player_num != ship.player_num:
                 if ship.coords not in self.combat_coordinates and isinstance(ship, Ship) and isinstance(item, Ship):
                     self.combat_coordinates.append(ship.coords)
+                    enemy_present = True
 
-                return True
 
-        return False
+        return enemy_present
 
     def add_to_board(self, objects, coordinates):
         if type(objects) is not list:
@@ -167,6 +169,7 @@ class Game:
 
         for player in self.players:
             player.strategy.simple_board = simple_board
+            player.strategy.turn = self.turn
 
     def confirm_hit(self, attacker, defender):
         if attacker.hp <= 0 or defender.hp <= 0:
@@ -233,6 +236,17 @@ class Game:
     def get_all_ships(self, coordinate):
         return [obj for obj in self.board[coordinate] if isinstance(obj, Ship)]
 
+    def complete_economic_phase(self):
+        if self.winner != None:
+            return
+
+        for player in self.players:
+            player.cp += 5
+
+        for player in self.players:
+            for ship
+
+
     def complete_combat_phase(self):
         if self.winner != None:
             return
@@ -244,7 +258,7 @@ class Game:
         for coordinate in self.combat_coordinates:
             sorting = sorted(self.get_all_ships(coordinate), key=lambda x: x.ship_class)
 
-            while len(set([obj.player_num for obj in self.board[coordinate]])) != 1 and len(sorting) > 0:
+            while len(set([obj.player_num for obj in self.board[coordinate] if obj.obj_type != 'Colony'])) != 1 and len(sorting) > 0:
                 self.logs.write('Combat at ' + str(coordinate) + ':\n\n')
                 self.logs.write('\Combat order:\n')
 
@@ -302,9 +316,18 @@ class Game:
         self.players.remove(player)
         self.remove_from_board(player.home_colony, player.home_colony.coords)
 
+    def is_enemy_in_my_home_colony(self, home_colony):
+        for obj in self.board[home_colony.coords]:
+            if obj.player_num != home_colony.player_num:
+                return True
+
+        return False
+        
+
     def check_for_winner(self):
         for player in self.players:
-            if self.is_enemy_in_translation(player.home_colony):
+            if self.is_enemy_in_my_home_colony(player.home_colony):
+            #if self.is_enemy_in_translation(player.home_colony):
                 self.logs.write('Player '+str(player.player_num)+' was removed from the game\n\n')
                 self.remove_player(player)
 

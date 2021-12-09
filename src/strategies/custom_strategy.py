@@ -4,6 +4,7 @@ from ship_data import *
 class CaydenStrat():
     def __init__(self):
         self.simple_board = None
+        self.turn = None
 
     def best_translation(self, options, coordinate, desired_location):
         best_option = options[0]

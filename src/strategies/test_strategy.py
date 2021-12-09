@@ -4,6 +4,7 @@ import random
 class TestStrategy():
     def __init__(self):
         self.simple_board = None
+        self.turn = None
 
     def best_option(self, options, coordinate):
         best_option = options[0]
@@ -86,5 +87,6 @@ class TestStrategy():
         return enemies[-1]
 
     def buy_ships(self, cp_budget):
-        return {'Dreadnaught': 8}
+        if self.turn == 1:
+            return {'Dreadnaught': 8}
         #{'Scout': 1, 'BattleCruiser': 1, 'Battleship': 1, 'Cruiser': 1, 'Destroyer': 1, 'Dreadnaught': 1}
