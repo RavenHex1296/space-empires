@@ -236,15 +236,45 @@ class Game:
     def get_all_ships(self, coordinate):
         return [obj for obj in self.board[coordinate] if isinstance(obj, Ship)]
 
+    def check_buy_ships(self, player):
+        wanted_ships = player.buy_ships(player.cp)
+        total_cp = 0
+        ships = []
+
+        for ship_name in wanted_ships:
+            for n in range(wanted_ships[ship_name]):
+                ship = self.get_ship_obj(ship_name, player.player_num, coordinates, n + 1)
+                ships.append(ship)
+                total_cp += ship.cp_cost
+
+        if total_cp <= player.cp:
+            for ship in ships:
+                player.add_ship(ship)
+                self.add_to_board(ship, coordinates)
+
+            player.cp = player.cp - total_cp
+        
+        return player.cp
+
     def complete_economic_phase(self):
         if self.winner != None:
             return
 
         for player in self.players:
-            player.cp += 5
+            for colony in player.colonies:
+                player.cp += 10
 
-        for player in self.players:
-            for ship
+        wanted_ships = player.buy_ships(player.cp)
+        total_cp = 0
+        ships = []
+
+        for ship_name in initial_ships:
+            for n in range(initial_ships[ship_name]):
+                ship = self.get_ship_obj(ship_name, player_number, coordinates, n + 1)
+                ships.append(ship)
+                total_cp += ship.cp_cost
+
+            
 
 
     def complete_combat_phase(self):
@@ -322,7 +352,6 @@ class Game:
                 return True
 
         return False
-        
 
     def check_for_winner(self):
         for player in self.players:
@@ -347,4 +376,5 @@ class Game:
         while self.winner == None:
             self.complete_movement_phase()
             self.complete_combat_phase()
+            self.complete_economic_phase()
             self.check_for_winner()
