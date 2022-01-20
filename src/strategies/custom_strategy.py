@@ -5,6 +5,7 @@ class CaydenStrat():
     def __init__(self):
         self.simple_board = None
         self.turn = None
+        self.player_num = None
 
     def best_translation(self, options, coordinate, desired_location):
         best_option = options[0]
@@ -105,13 +106,21 @@ class CaydenStrat():
         return my_ships
     
     def get_optimal_translation(self, ship_info, possible_translations, wanted_location):
+        min_distance = 100000
+        min_translation = None
+
         for translation in possible_translations:
-            if (ship_info['coords'][0] + translation[0], ship_info['coords'][1] + translation[1]) == wanted_location:
-                return translation
+            if math.dist((ship_info['coords'][0] + translation[0], ship_info['coords'][1] + translation[1]), wanted_location) < min_distance:
+                min_translation = translation
+                min_distance =  math.dist((ship_info['coords'][0] + translation[0], ship_info['coords'][1] + translation[1]), wanted_location)
+
+        return min_translation
 
     def choose_translation(self, ship_info, possible_translations):
         opponent_home_colony = None
         my_home_colony_coords = None
+
+        self.player_num = ship_info['player_num']
 
         for key in self.simple_board:
             for obj in self.simple_board[key]:
@@ -126,21 +135,12 @@ class CaydenStrat():
         if not self.enemy_ships_left(ship_info['player_num']):
             return best_translation
 
-
-        if ship_info['name'] == 'Scout' and self.is_enemy_in_translation(ship_info, best_translation):
-            other_translations = [translation for translation in possible_translations if translation != best_translation and translation != (0, 0)]
-            return self.get_next_best_translation(ship_info, other_translations, opponent_home_colony)
-
-        if ship_info['name'] == 'Scout' and not self.is_enemy_in_translation(ship_info, best_translation):
-            if ship_info['player_num'] == 1:
-                if self.are_my_ships_in_coord((ship_info['coords'][0], ship_info['coords'][1] + 2), 2) or self.are_my_ships_in_coord((ship_info['coords'][0], ship_info['coords'][1] + 1), 2): #their ships
-                    return self.get_next_best_translation(ship_info, [translation for translation in possible_translations if translation != best_translation and translation != (0, 0)], opponent_home_colony)
-
-            return best_translation
-
         if ship_info['name'] == 'Dreadnaught' and self.enemy_ships_left(ship_info['player_num']):
-            defense_coordinates = self.get_around_colony_coordinates(my_home_colony_coords, ship_info['player_num'])
-            return self.get_optimal_translation(ship_info, possible_translations, defense_coordinates[-1])
+            if ship_info['coords'] != my_home_colony_coords:
+                return self.get_optimal_translation(ship_info, [(0,0), (0,1), (0,-1), (1,0), (-1,0)], my_home_colony_coords)
+
+            if ship_info['coords'] == my_home_colony_coords:
+                return (0, 0)
 
     def get_enemies(self, own_ship, combat_order):
         player_num = own_ship['player_num']
@@ -156,5 +156,80 @@ class CaydenStrat():
         enemies = self.get_enemies(ship_info, combat_order)
         return enemies[0]
 
+    def get_my_ships(self):
+        my_ships = []
+
+        for coordinate in self.simple_board:
+            for obj in self.simple_board[coordinate]:
+                if obj['obj_type'] == 'Ship' and obj['player_num'] == self.player_num:
+                    my_ships.append(obj)
+
+        return my_ships
+
     def buy_ships(self, cp_budget):
-        return {'Dreadnaught': 8, 'Scout': 1}
+        if self.turn == 0:
+            return {'Dreadnaught': 5}
+
+        #if self.player_num == 1:
+            #print("Turn: ", self.turn) 
+            #print('Cp: ', cp_budget)
+            #print(len(self.get_my_ships()), '\n')
+
+        if cp_budget > 34:
+            return {'Dreadnaught': 1}
+
+'''
+        for ship in self.get_my_ships(self.player_num):
+            #maint_costs += ship['maint_cost']
+
+        spending_cp = cp_budget - maint_costs
+
+        opponent_num_dreadnaughts = 0
+        me_num_dreadnaughts = 0
+
+        for coordinate in self.simple_board:
+            for obj in self.simple_board[coordinate]:
+                if obj['obj_type'] == 'Ship' and obj['name'] == 'Dreadnaught' and obj['player_num'] != self.player_num:
+                    opponent_num_dreadnaughts += 1
+
+                if obj['obj_type'] == 'Ship' and obj['name'] == 'Dreadnaught' and obj['player_num'] != self.player_num:
+                    me_num_dreadnaughts += 1
+
+
+def choose_translation(self, ship_info, possible_translations):
+        opponent_home_colony = None
+        my_home_colony_coords = None
+
+        self.player_num = ship_info['player_num']
+
+        for key in self.simple_board:
+            for obj in self.simple_board[key]:
+                if obj['obj_type'] == 'Colony' and obj['player_num'] != ship_info['player_num'] and obj['is_home_colony'] == True:
+                    opponent_home_colony = key
+
+                if obj['obj_type'] == 'Colony' and obj['player_num'] == ship_info['player_num'] and obj['is_home_colony'] == True:
+                    my_home_colony_coords = key
+
+        best_translation = self.best_translation(possible_translations, ship_info['coords'], opponent_home_colony)
+
+        if not self.enemy_ships_left(ship_info['player_num']):
+            return best_translation
+
+        if ship_info['name'] != 'Dreadnaught' and self.is_enemy_in_translation(ship_info, best_translation):
+            other_translations = [translation for translation in possible_translations if translation != best_translation and translation != (0, 0)]
+            return self.get_next_best_translation(ship_info, other_translations, opponent_home_colony)
+
+        if ship_info['name'] != 'Dreadnaught' and not self.is_enemy_in_translation(ship_info, best_translation):
+            if ship_info['player_num'] == 1:
+                if self.are_my_ships_in_coord((ship_info['coords'][0], ship_info['coords'][1] + 2), 2) or self.are_my_ships_in_coord((ship_info['coords'][0], ship_info['coords'][1] + 1), 2): #their ships
+                    return self.get_next_best_translation(ship_info, [translation for translation in possible_translations if translation != best_translation and translation != (0, 0)], opponent_home_colony)
+
+            return best_translation
+
+        if ship_info['name'] == 'Dreadnaught' and self.enemy_ships_left(ship_info['player_num']):
+            if ship_info['coords'] != my_home_colony_coords:
+                return self.get_optimal_translation(ship_info, [(0,0), (0,1), (0,-1), (1,0), (-1,0)], my_home_colony_coords)
+
+            if ship_info['coords'] == my_home_colony_coords:
+                return (0, 0)
+'''

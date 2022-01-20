@@ -24,7 +24,7 @@ class Game:
         mid_y = (board_y + 1) // 2
 
         self.board = {(x, y): [] for x in range(board_x) for y in range(board_y)}
-        self.turn = 1
+        self.turn = 0
         self.winner = None
  
         self.initialize_game()
@@ -127,15 +127,15 @@ class Game:
         if ship_name == 'Dreadnaught':
             return Dreadnaught(player_number, coordinates, ship_num)
 
-
     def initialize_game(self):
         starting_coordinates = [(mid_y - 1, 0), (mid_y - 1, board_x - 1), (0, mid_x - 1), (board_y - 1, mid_x - 1)]
 
         self.logs.write(str(len(self.players)) + ' Players are playing\n')
         self.logs.write('INITIALIZING GAME...\n\n')
- 
+
         for n in range(len(self.players)):
             player = self.players[n]
+            player.strategy.turn = self.turn
             player_number = self.players[n].player_num
             coordinates = starting_coordinates[n]
             player.set_home_colony(coordinates)
@@ -155,6 +155,7 @@ class Game:
             if total_cp <= self.initial_cp:
                 for ship in ships:
                     player.add_ship(ship)
+                    player.ship_counter[ship.name] += 1
                     self.add_to_board(ship, coordinates)
 
                 player.cp = player.cp - total_cp
@@ -162,6 +163,7 @@ class Game:
             else: 
                 self.logs.write('Went over CP budget, no ships given\n')
 
+        self.turn = 1
         self.logs.write('\n')
 
     def get_simple_board(self):
@@ -236,46 +238,62 @@ class Game:
     def get_all_ships(self, coordinate):
         return [obj for obj in self.board[coordinate] if isinstance(obj, Ship)]
 
+    def get_ship_num(self, player, ship_name):
+        for key in player.ship_counter:
+            if key == ship_name:
+                return player.ship_counter[key] + 1
+
     def check_buy_ships(self, player):
         wanted_ships = player.buy_ships(player.cp)
+
+        if wanted_ships == None:
+            return player.cp
+
         total_cp = 0
         ships = []
 
         for ship_name in wanted_ships:
             for n in range(wanted_ships[ship_name]):
-                ship = self.get_ship_obj(ship_name, player.player_num, coordinates, n + 1)
+                ship_num = self.get_ship_num(player, ship_name)
+                ship = self.get_ship_obj(ship_name, player.player_num, player.home_colony.coords, ship_num)
                 ships.append(ship)
                 total_cp += ship.cp_cost
 
         if total_cp <= player.cp:
             for ship in ships:
                 player.add_ship(ship)
-                self.add_to_board(ship, coordinates)
+                player.ship_counter[ship.name] += 1
+                self.add_to_board(ship, player.home_colony.coords)
+                self.logs.write('\nPlayer ' + str(player.player_num) + ' has bought a ' + str(ship.name))
 
             player.cp = player.cp - total_cp
-        
+            
         return player.cp
 
     def complete_economic_phase(self):
         if self.winner != None:
             return
 
+        self.logs.write('Start turn ' + str(self.turn) + ' Economic phase\n')
+
         for player in self.players:
-            for colony in player.colonies:
-                player.cp += 10
+            player.cp += 10 * (len(player.colonies) + 1)
 
-        wanted_ships = player.buy_ships(player.cp)
-        total_cp = 0
-        ships = []
+            player_ships = sorted(player.ships, reverse=True, key=lambda x: x.maint_cost)
 
-        for ship_name in initial_ships:
-            for n in range(initial_ships[ship_name]):
-                ship = self.get_ship_obj(ship_name, player_number, coordinates, n + 1)
-                ships.append(ship)
-                total_cp += ship.cp_cost
+            for ship in player_ships:
+                if (player.cp - ship.maint_cost) >= 0:
+                    player.cp -= ship.maint_cost
 
-            
+                else:
+                    self.logs.write('\nPlayer ' + str(player.player_num) + ' ' + str(ship.name) + str(ship.ship_num) + ' has been deleted')
+                    self.remove_ship(ship)      
 
+            self.check_buy_ships(player)
+            self.logs.write('\nPlayer ' + str(player.player_num) + ' has ' + str(player.cp) + ' cp left\n')
+
+        self.logs.write('\nEnd turn ' + str(self.turn) + ' Economic phase\n\n')
+        self.turn += 1
 
     def complete_combat_phase(self):
         if self.winner != None:
@@ -290,10 +308,10 @@ class Game:
 
             while len(set([obj.player_num for obj in self.board[coordinate] if obj.obj_type != 'Colony'])) != 1 and len(sorting) > 0:
                 self.logs.write('Combat at ' + str(coordinate) + ':\n\n')
-                self.logs.write('\Combat order:\n')
+                self.logs.write('Combat order:\n')
 
                 for ship in sorting:
-                    self.logs.write('\n\tPlayer ' + str(ship.player_num) + ' ' + str(ship.name) + ' ' + str(ship.ship_num) + '\n')
+                    self.logs.write('\tPlayer ' + str(ship.player_num) + ' ' + str(ship.name) + ' ' + str(ship.ship_num) + '\n\n')
 
                 for ship in sorting:
                     if ship.hp <= 0:
@@ -334,7 +352,6 @@ class Game:
                 self.combat_coordinates.remove(coordinate)
 
         self.logs.write('End turn ' + str(self.turn) + ' combat phase\n\n')
-        self.turn += 1
 
     def remove_player(self, player):
         for ship in player.ships:

@@ -39,9 +39,8 @@ class TestStrategy():
             for obj in self.simple_board[moving_to_coord]:
                 if obj['player_num'] != ship_info['player_num'] and obj['obj_type'] == 'Ship':
                     return True
-
-                else:
-                    return False
+            
+            return False
 
         if moving_to_coord not in [key for key in self.simple_board]:
             return False
@@ -87,6 +86,9 @@ class TestStrategy():
         return enemies[-1]
 
     def buy_ships(self, cp_budget):
-        if self.turn == 1:
-            return {'Dreadnaught': 8}
+        if self.turn == 0:
+            return {'Dreadnaught': 5}
+
+        if cp_budget > 34:
+            return {'Dreadnaught': 1}
         #{'Scout': 1, 'BattleCruiser': 1, 'Battleship': 1, 'Cruiser': 1, 'Destroyer': 1, 'Dreadnaught': 1}

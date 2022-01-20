@@ -78,4 +78,3 @@ for _ in range (n):
 
 print("scout attacking scout", data, data['hit'] / (data['hit'] + data['miss']))
 '''
-print('A' > 'B')
