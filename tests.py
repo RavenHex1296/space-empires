@@ -78,3 +78,6 @@ for _ in range (n):
 
 print("scout attacking scout", data, data['hit'] / (data['hit'] + data['miss']))
 '''
+
+x = [1,2,3]
+print(x.pop(), x)

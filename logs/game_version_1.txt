@@ -107,16 +107,16 @@ Combat order:
 
 	Player 2 Dreadnaught 5
 
-\Player 1 Dreadnaught 1 attacking player 2 Dreadnaught 5...Miss
-\Player 1 Dreadnaught 2 attacking player 2 Dreadnaught 5...Miss
-\Player 1 Dreadnaught 3 attacking player 2 Dreadnaught 5...Miss
-\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 5...Miss
-\Player 1 Dreadnaught 5 attacking player 2 Dreadnaught 5...Hit!
-\Player 2 Dreadnaught 1 attacking player 1 Dreadnaught 5...Miss
-\Player 2 Dreadnaught 2 attacking player 1 Dreadnaught 5...Miss
-\Player 2 Dreadnaught 3 attacking player 1 Dreadnaught 5...Miss
-\Player 2 Dreadnaught 4 attacking player 1 Dreadnaught 5...Miss
-\Player 2 Dreadnaught 5 attacking player 1 Dreadnaught 5...Miss
+\Player 1 Dreadnaught 1 attacking player 2 Dreadnaught 1...Miss
+\Player 1 Dreadnaught 2 attacking player 2 Dreadnaught 1...Miss
+\Player 1 Dreadnaught 3 attacking player 2 Dreadnaught 1...Miss
+\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 1...Miss
+\Player 1 Dreadnaught 5 attacking player 2 Dreadnaught 1...Miss
+\Player 2 Dreadnaught 1 attacking player 1 Dreadnaught 1...Miss
+\Player 2 Dreadnaught 2 attacking player 1 Dreadnaught 1...Hit!
+\Player 2 Dreadnaught 3 attacking player 1 Dreadnaught 1...Miss
+\Player 2 Dreadnaught 4 attacking player 1 Dreadnaught 1...Miss
+\Player 2 Dreadnaught 5 attacking player 1 Dreadnaught 1...Miss
 
 Combat at (3, 3):
 
@@ -141,16 +141,16 @@ Combat order:
 
 	Player 2 Dreadnaught 5
 
-\Player 1 Dreadnaught 1 attacking player 2 Dreadnaught 5...Hit!
-\Player 1 Dreadnaught 2 attacking player 2 Dreadnaught 5...Miss
-\Player 1 Dreadnaught 3 attacking player 2 Dreadnaught 5...Miss
-\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 5...Miss
-\Player 1 Dreadnaught 5 attacking player 2 Dreadnaught 5...Hit!
-\Player 2 Dreadnaught 5 was destroyed in combat
-\Player 2 Dreadnaught 1 attacking player 1 Dreadnaught 5...Miss
-\Player 2 Dreadnaught 2 attacking player 1 Dreadnaught 5...Hit!
-\Player 2 Dreadnaught 3 attacking player 1 Dreadnaught 5...Hit!
-\Player 2 Dreadnaught 4 attacking player 1 Dreadnaught 5...Miss
+\Player 1 Dreadnaught 1 attacking player 2 Dreadnaught 1...Miss
+\Player 1 Dreadnaught 2 attacking player 2 Dreadnaught 1...Miss
+\Player 1 Dreadnaught 3 attacking player 2 Dreadnaught 1...Miss
+\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 1...Hit!
+\Player 1 Dreadnaught 5 attacking player 2 Dreadnaught 1...Miss
+\Player 2 Dreadnaught 1 attacking player 1 Dreadnaught 1...Hit!
+\Player 2 Dreadnaught 2 attacking player 1 Dreadnaught 1...Miss
+\Player 2 Dreadnaught 3 attacking player 1 Dreadnaught 1...Miss
+\Player 2 Dreadnaught 4 attacking player 1 Dreadnaught 1...Miss
+\Player 2 Dreadnaught 5 attacking player 1 Dreadnaught 1...Miss
 
 Combat at (3, 3):
 
@@ -173,16 +173,18 @@ Combat order:
 
 	Player 2 Dreadnaught 4
 
-\Player 1 Dreadnaught 1 attacking player 2 Dreadnaught 4...Miss
-\Player 1 Dreadnaught 2 attacking player 2 Dreadnaught 4...Hit!
-\Player 1 Dreadnaught 3 attacking player 2 Dreadnaught 4...Miss
-\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 4...Hit!
-\Player 1 Dreadnaught 5 attacking player 2 Dreadnaught 4...Miss
-\Player 2 Dreadnaught 1 attacking player 1 Dreadnaught 5...Miss
-\Player 2 Dreadnaught 2 attacking player 1 Dreadnaught 5...Miss
-\Player 2 Dreadnaught 3 attacking player 1 Dreadnaught 5...Miss
-\Player 2 Dreadnaught 4 attacking player 1 Dreadnaught 5...Hit!
-\Player 1 Dreadnaught 5 was destroyed in combat
+	Player 2 Dreadnaught 5
+
+\Player 1 Dreadnaught 1 attacking player 2 Dreadnaught 1...Miss
+\Player 1 Dreadnaught 2 attacking player 2 Dreadnaught 1...Hit!
+\Player 1 Dreadnaught 3 attacking player 2 Dreadnaught 1...Hit!
+\Player 2 Dreadnaught 1 was destroyed in combat
+\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 2...Hit!
+\Player 1 Dreadnaught 5 attacking player 2 Dreadnaught 2...Miss
+\Player 2 Dreadnaught 2 attacking player 1 Dreadnaught 1...Miss
+\Player 2 Dreadnaught 3 attacking player 1 Dreadnaught 1...Miss
+\Player 2 Dreadnaught 4 attacking player 1 Dreadnaught 1...Miss
+\Player 2 Dreadnaught 5 attacking player 1 Dreadnaught 1...Miss
 
 Combat at (3, 3):
 
@@ -195,7 +197,7 @@ Combat order:
 
 	Player 1 Dreadnaught 4
 
-	Player 2 Dreadnaught 1
+	Player 1 Dreadnaught 5
 
 	Player 2 Dreadnaught 2
 
@@ -203,144 +205,205 @@ Combat order:
 
 	Player 2 Dreadnaught 4
 
-\Player 1 Dreadnaught 1 attacking player 2 Dreadnaught 4...Hit!
-\Player 2 Dreadnaught 4 was destroyed in combat
-\Player 1 Dreadnaught 2 attacking player 2 Dreadnaught 3...Hit!
-\Player 1 Dreadnaught 3 attacking player 2 Dreadnaught 3...Hit!
-\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 3...Miss
-\Player 2 Dreadnaught 1 attacking player 1 Dreadnaught 4...Miss
-\Player 2 Dreadnaught 2 attacking player 1 Dreadnaught 4...Miss
-\Player 2 Dreadnaught 3 attacking player 1 Dreadnaught 4...Miss
+	Player 2 Dreadnaught 5
+
+\Player 1 Dreadnaught 1 attacking player 2 Dreadnaught 2...Hit!
+\Player 1 Dreadnaught 2 attacking player 2 Dreadnaught 2...Miss
+\Player 1 Dreadnaught 3 attacking player 2 Dreadnaught 2...Miss
+\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 2...Miss
+\Player 1 Dreadnaught 5 attacking player 2 Dreadnaught 2...Miss
+\Player 2 Dreadnaught 2 attacking player 1 Dreadnaught 1...Miss
+\Player 2 Dreadnaught 3 attacking player 1 Dreadnaught 1...Hit!
+\Player 1 Dreadnaught 1 was destroyed in combat
+\Player 2 Dreadnaught 4 attacking player 1 Dreadnaught 2...Miss
+\Player 2 Dreadnaught 5 attacking player 1 Dreadnaught 2...Hit!
 
 Combat at (3, 3):
 
 Combat order:
-	Player 1 Dreadnaught 1
-
 	Player 1 Dreadnaught 2
 
 	Player 1 Dreadnaught 3
 
 	Player 1 Dreadnaught 4
 
-	Player 2 Dreadnaught 1
+	Player 1 Dreadnaught 5
 
 	Player 2 Dreadnaught 2
 
 	Player 2 Dreadnaught 3
 
-\Player 1 Dreadnaught 1 attacking player 2 Dreadnaught 3...Hit!
-\Player 2 Dreadnaught 3 was destroyed in combat
-\Player 1 Dreadnaught 2 attacking player 2 Dreadnaught 2...Miss
-\Player 1 Dreadnaught 3 attacking player 2 Dreadnaught 2...Miss
-\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 2...Hit!
-\Player 2 Dreadnaught 1 attacking player 1 Dreadnaught 4...Miss
-\Player 2 Dreadnaught 2 attacking player 1 Dreadnaught 4...Hit!
+	Player 2 Dreadnaught 4
 
-Combat at (3, 3):
+	Player 2 Dreadnaught 5
 
-Combat order:
-	Player 1 Dreadnaught 1
-
-	Player 1 Dreadnaught 2
-
-	Player 1 Dreadnaught 3
-
-	Player 1 Dreadnaught 4
-
-	Player 2 Dreadnaught 1
-
-	Player 2 Dreadnaught 2
-
-\Player 1 Dreadnaught 1 attacking player 2 Dreadnaught 2...Miss
-\Player 1 Dreadnaught 2 attacking player 2 Dreadnaught 2...Miss
-\Player 1 Dreadnaught 3 attacking player 2 Dreadnaught 2...Hit!
-\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 2...Miss
-\Player 2 Dreadnaught 1 attacking player 1 Dreadnaught 4...Miss
-\Player 2 Dreadnaught 2 attacking player 1 Dreadnaught 4...Miss
-
-Combat at (3, 3):
-
-Combat order:
-	Player 1 Dreadnaught 1
-
-	Player 1 Dreadnaught 2
-
-	Player 1 Dreadnaught 3
-
-	Player 1 Dreadnaught 4
-
-	Player 2 Dreadnaught 1
-
-	Player 2 Dreadnaught 2
-
-\Player 1 Dreadnaught 1 attacking player 2 Dreadnaught 2...Miss
-\Player 1 Dreadnaught 2 attacking player 2 Dreadnaught 2...Miss
-\Player 1 Dreadnaught 3 attacking player 2 Dreadnaught 2...Hit!
+\Player 1 Dreadnaught 2 attacking player 2 Dreadnaught 2...Hit!
 \Player 2 Dreadnaught 2 was destroyed in combat
-\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 1...Miss
-\Player 2 Dreadnaught 1 attacking player 1 Dreadnaught 4...Miss
+\Player 1 Dreadnaught 3 attacking player 2 Dreadnaught 3...Miss
+\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 3...Hit!
+\Player 1 Dreadnaught 5 attacking player 2 Dreadnaught 3...Miss
+\Player 2 Dreadnaught 3 attacking player 1 Dreadnaught 2...Miss
+\Player 2 Dreadnaught 4 attacking player 1 Dreadnaught 2...Hit!
+\Player 2 Dreadnaught 5 attacking player 1 Dreadnaught 2...Hit!
+\Player 1 Dreadnaught 2 was destroyed in combat
 
 Combat at (3, 3):
 
 Combat order:
-	Player 1 Dreadnaught 1
-
-	Player 1 Dreadnaught 2
-
 	Player 1 Dreadnaught 3
 
 	Player 1 Dreadnaught 4
 
-	Player 2 Dreadnaught 1
+	Player 1 Dreadnaught 5
 
-\Player 1 Dreadnaught 1 attacking player 2 Dreadnaught 1...Miss
-\Player 1 Dreadnaught 2 attacking player 2 Dreadnaught 1...Hit!
-\Player 1 Dreadnaught 3 attacking player 2 Dreadnaught 1...Miss
-\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 1...Miss
-\Player 2 Dreadnaught 1 attacking player 1 Dreadnaught 4...Miss
+	Player 2 Dreadnaught 3
+
+	Player 2 Dreadnaught 4
+
+	Player 2 Dreadnaught 5
+
+\Player 1 Dreadnaught 3 attacking player 2 Dreadnaught 3...Miss
+\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 3...Miss
+\Player 1 Dreadnaught 5 attacking player 2 Dreadnaught 3...Hit!
+\Player 2 Dreadnaught 3 attacking player 1 Dreadnaught 3...Hit!
+\Player 2 Dreadnaught 4 attacking player 1 Dreadnaught 3...Hit!
+\Player 2 Dreadnaught 5 attacking player 1 Dreadnaught 3...Hit!
+\Player 1 Dreadnaught 3 was destroyed in combat
 
 Combat at (3, 3):
 
 Combat order:
-	Player 1 Dreadnaught 1
-
-	Player 1 Dreadnaught 2
-
-	Player 1 Dreadnaught 3
-
 	Player 1 Dreadnaught 4
 
-	Player 2 Dreadnaught 1
+	Player 1 Dreadnaught 5
 
-\Player 1 Dreadnaught 1 attacking player 2 Dreadnaught 1...Hit!
-\Player 1 Dreadnaught 2 attacking player 2 Dreadnaught 1...Miss
-\Player 1 Dreadnaught 3 attacking player 2 Dreadnaught 1...Miss
-\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 1...Miss
-\Player 2 Dreadnaught 1 attacking player 1 Dreadnaught 4...Miss
+	Player 2 Dreadnaught 3
+
+	Player 2 Dreadnaught 4
+
+	Player 2 Dreadnaught 5
+
+\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 3...Miss
+\Player 1 Dreadnaught 5 attacking player 2 Dreadnaught 3...Hit!
+\Player 2 Dreadnaught 3 was destroyed in combat
+\Player 2 Dreadnaught 4 attacking player 1 Dreadnaught 4...Hit!
+\Player 2 Dreadnaught 5 attacking player 1 Dreadnaught 4...Miss
 
 Combat at (3, 3):
 
 Combat order:
-	Player 1 Dreadnaught 1
-
-	Player 1 Dreadnaught 2
-
-	Player 1 Dreadnaught 3
-
 	Player 1 Dreadnaught 4
 
-	Player 2 Dreadnaught 1
+	Player 1 Dreadnaught 5
 
-\Player 1 Dreadnaught 1 attacking player 2 Dreadnaught 1...Miss
-\Player 1 Dreadnaught 2 attacking player 2 Dreadnaught 1...Hit!
-\Player 2 Dreadnaught 1 was destroyed in combat
+	Player 2 Dreadnaught 4
+
+	Player 2 Dreadnaught 5
+
+\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 4...Hit!
+\Player 1 Dreadnaught 5 attacking player 2 Dreadnaught 4...Miss
+\Player 2 Dreadnaught 4 attacking player 1 Dreadnaught 4...Miss
+\Player 2 Dreadnaught 5 attacking player 1 Dreadnaught 4...Miss
+
+Combat at (3, 3):
+
+Combat order:
+	Player 1 Dreadnaught 4
+
+	Player 1 Dreadnaught 5
+
+	Player 2 Dreadnaught 4
+
+	Player 2 Dreadnaught 5
+
+\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 4...Hit!
+\Player 1 Dreadnaught 5 attacking player 2 Dreadnaught 4...Hit!
+\Player 2 Dreadnaught 4 was destroyed in combat
+\Player 2 Dreadnaught 5 attacking player 1 Dreadnaught 4...Hit!
+
+Combat at (3, 3):
+
+Combat order:
+	Player 1 Dreadnaught 4
+
+	Player 1 Dreadnaught 5
+
+	Player 2 Dreadnaught 5
+
+\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 5...Hit!
+\Player 1 Dreadnaught 5 attacking player 2 Dreadnaught 5...Miss
+\Player 2 Dreadnaught 5 attacking player 1 Dreadnaught 4...Miss
+
+Combat at (3, 3):
+
+Combat order:
+	Player 1 Dreadnaught 4
+
+	Player 1 Dreadnaught 5
+
+	Player 2 Dreadnaught 5
+
+\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 5...Miss
+\Player 1 Dreadnaught 5 attacking player 2 Dreadnaught 5...Miss
+\Player 2 Dreadnaught 5 attacking player 1 Dreadnaught 4...Miss
+
+Combat at (3, 3):
+
+Combat order:
+	Player 1 Dreadnaught 4
+
+	Player 1 Dreadnaught 5
+
+	Player 2 Dreadnaught 5
+
+\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 5...Miss
+\Player 1 Dreadnaught 5 attacking player 2 Dreadnaught 5...Miss
+\Player 2 Dreadnaught 5 attacking player 1 Dreadnaught 4...Miss
+
+Combat at (3, 3):
+
+Combat order:
+	Player 1 Dreadnaught 4
+
+	Player 1 Dreadnaught 5
+
+	Player 2 Dreadnaught 5
+
+\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 5...Miss
+\Player 1 Dreadnaught 5 attacking player 2 Dreadnaught 5...Miss
+\Player 2 Dreadnaught 5 attacking player 1 Dreadnaught 4...Miss
+
+Combat at (3, 3):
+
+Combat order:
+	Player 1 Dreadnaught 4
+
+	Player 1 Dreadnaught 5
+
+	Player 2 Dreadnaught 5
+
+\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 5...Miss
+\Player 1 Dreadnaught 5 attacking player 2 Dreadnaught 5...Hit!
+\Player 2 Dreadnaught 5 attacking player 1 Dreadnaught 4...Miss
+
+Combat at (3, 3):
+
+Combat order:
+	Player 1 Dreadnaught 4
+
+	Player 1 Dreadnaught 5
+
+	Player 2 Dreadnaught 5
+
+\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 5...Miss
+\Player 1 Dreadnaught 5 attacking player 2 Dreadnaught 5...Hit!
+\Player 2 Dreadnaught 5 was destroyed in combat
 
 End turn 3 combat phase
 
 Start turn 3 Economic phase
 
-Player 1 has 18 cp left
+Player 1 has 24 cp left
 
 Player 2 has 30 cp left
 
@@ -349,10 +412,8 @@ End turn 3 Economic phase
 Start turn 4 Movement phase
 
 PLAYER 1 MOVING:
-	Moving player 1 Dreadnaught 1: (3, 3) -> (3, 4)
-	Moving player 1 Dreadnaught 2: (3, 3) -> (3, 4)
-	Moving player 1 Dreadnaught 3: (3, 3) -> (3, 4)
 	Moving player 1 Dreadnaught 4: (3, 3) -> (3, 4)
+	Moving player 1 Dreadnaught 5: (3, 3) -> (3, 4)
 
 PLAYER 2 HAS NO SHIPS
 
@@ -364,81 +425,39 @@ End turn 4 combat phase
 
 Start turn 4 Economic phase
 
-Player 1 has 16 cp left
+Player 1 has 28 cp left
 
-Player 2 has bought a Dreadnaught
-Player 2 has 16 cp left
+Player 2 has 40 cp left
 
 End turn 4 Economic phase
 
 Start turn 5 Movement phase
 
 PLAYER 1 MOVING:
-	Moving player 1 Dreadnaught 1: (3, 4) -> (3, 5)
-	Moving player 1 Dreadnaught 2: (3, 4) -> (3, 5)
-	Moving player 1 Dreadnaught 3: (3, 4) -> (3, 5)
 	Moving player 1 Dreadnaught 4: (3, 4) -> (3, 5)
+	Moving player 1 Dreadnaught 5: (3, 4) -> (3, 5)
 
-PLAYER 2 MOVING:
-	Moving player 2 Dreadnaught 6: (3, 6) -> (3, 5)
+PLAYER 2 HAS NO SHIPS
 
 End turn 5 movement phase
 
 Beginning of turn 5 combat phase
 
-Combat at (3, 5):
-
-Combat order:
-	Player 1 Dreadnaught 1
-
-	Player 1 Dreadnaught 2
-
-	Player 1 Dreadnaught 3
-
-	Player 1 Dreadnaught 4
-
-	Player 2 Dreadnaught 6
-
-\Player 1 Dreadnaught 1 attacking player 2 Dreadnaught 6...Hit!
-\Player 1 Dreadnaught 2 attacking player 2 Dreadnaught 6...Miss
-\Player 1 Dreadnaught 3 attacking player 2 Dreadnaught 6...Miss
-\Player 1 Dreadnaught 4 attacking player 2 Dreadnaught 6...Miss
-\Player 2 Dreadnaught 6 attacking player 1 Dreadnaught 4...Miss
-
-Combat at (3, 5):
-
-Combat order:
-	Player 1 Dreadnaught 1
-
-	Player 1 Dreadnaught 2
-
-	Player 1 Dreadnaught 3
-
-	Player 1 Dreadnaught 4
-
-	Player 2 Dreadnaught 6
-
-\Player 1 Dreadnaught 1 attacking player 2 Dreadnaught 6...Hit!
-\Player 1 Dreadnaught 2 attacking player 2 Dreadnaught 6...Hit!
-\Player 2 Dreadnaught 6 was destroyed in combat
-
 End turn 5 combat phase
 
 Start turn 5 Economic phase
 
-Player 1 has 14 cp left
+Player 1 has 32 cp left
 
-Player 2 has 26 cp left
+Player 2 has 50 cp left
 
 End turn 5 Economic phase
 
 Start turn 6 Movement phase
 
 PLAYER 1 MOVING:
-	Moving player 1 Dreadnaught 1: (3, 5) -> (3, 6)
-	Moving player 1 Dreadnaught 2: (3, 5) -> (3, 6)
-	Moving player 1 Dreadnaught 3: (3, 5) -> (3, 6)
 	Moving player 1 Dreadnaught 4: (3, 5) -> (3, 6)
+	Moving player 1 Dreadnaught 5: (3, 5) -> (3, 6)
 
 PLAYER 2 HAS NO SHIPS
 
@@ -450,10 +469,10 @@ End turn 6 combat phase
 
 Start turn 6 Economic phase
 
-Player 1 has 12 cp left
+Player 1 has 36 cp left
 
 Player 2 has bought a Dreadnaught
-Player 2 has 12 cp left
+Player 2 has 36 cp left
 
 End turn 6 Economic phase
 

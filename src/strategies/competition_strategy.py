@@ -1,7 +1,7 @@
 import math
 import random
 
-class TestStrategy():
+class CaydenCompStrat():
     def __init__(self):
         self.simple_board = None
         self.turn = None
@@ -64,12 +64,7 @@ class TestStrategy():
         closest_colony = self.best_option(opponent_home_colony, ship_info['coords'])
         best_translation = self.best_translation(possible_translations, ship_info['coords'], closest_colony)
 
-        if self.is_enemy_in_translation(ship_info, best_translation):
-            return best_translation
-
-        else:
-            return best_translation
-
+        return best_translation
 
     def get_enemies(self, own_ship, combat_order):
         player_num = own_ship['player_num']
@@ -91,4 +86,3 @@ class TestStrategy():
 
         if cp_budget > 50:
             return {'Dreadnaught': 1}
-        #{'Scout': 1, 'BattleCruiser': 1, 'Battleship': 1, 'Cruiser': 1, 'Destroyer': 1, 'Dreadnaught': 1}

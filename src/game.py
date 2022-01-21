@@ -101,12 +101,14 @@ class Game:
 
     def move_ship(self, ship, translation):
         new_coordinates = (ship.coords[0] + translation[0], ship.coords[1] + translation[1])
+        old_coordinates = ship.coords
 
-        self.logs.write('\tMoving player ' + str(ship.player_num) + ' ' + str(ship.name) + ' ' + str(ship.ship_num) + ': ' + str(ship.coords) + ' -> '+ str(new_coordinates) + '\n')
+        if new_coordinates != ship.coords:
+            self.remove_from_board(ship, ship.coords)
+            ship.update_coordinates(new_coordinates)
+            self.add_to_board(ship, new_coordinates)
 
-        self.remove_from_board(ship, ship.coords)
-        ship.update_coordinates(new_coordinates)
-        self.add_to_board(ship, new_coordinates)
+        self.logs.write('\tMoving player ' + str(ship.player_num) + ' ' + str(ship.name) + ' ' + str(ship.ship_num) + ': ' + str(old_coordinates) + ' -> '+ str(new_coordinates) + '\n')
 
     def get_ship_obj(self, ship_name, player_number, coordinates, ship_num):
         if ship_name == 'Scout':
@@ -280,14 +282,20 @@ class Game:
             player.cp += 10 * (len(player.colonies) + 1)
 
             player_ships = sorted(player.ships, reverse=True, key=lambda x: x.maint_cost)
+            total_maint_cost = 0
 
             for ship in player_ships:
-                if (player.cp - ship.maint_cost) >= 0:
-                    player.cp -= ship.maint_cost
+                total_maint_cost += ship.maint_cost
 
-                else:
-                    self.logs.write('\nPlayer ' + str(player.player_num) + ' ' + str(ship.name) + str(ship.ship_num) + ' has been deleted')
-                    self.remove_ship(ship)      
+            if (player.cp - total_maint_cost) >= 0:
+                player.cp -= total_maint_cost
+
+            else:
+                while player.cp - total_maint_cost < 0:
+                    delete_ship = player_ships.pop()
+                    total_maint_cost -= delete_ship.maint_cost                   
+                    self.logs.write('\nPlayer ' + str(player.player_num) + ' ' + str(delete_ship.name) + ' ' + str(delete_ship.ship_num) + ' has been deleted')
+                    self.remove_ship(delete_ship)
 
             self.check_buy_ships(player)
             self.logs.write('\nPlayer ' + str(player.player_num) + ' has ' + str(player.cp) + ' cp left\n')
